@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ShuftiPro.Base;
 
 namespace ShuftiPro.OnSite
 {
-    class ShuftiProOnSiteAddress
+    public class ShuftiProOnSiteAddress : ShuftiProAddress
     {
     }
 }

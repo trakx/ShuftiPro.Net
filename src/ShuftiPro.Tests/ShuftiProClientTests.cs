@@ -53,7 +53,7 @@ namespace ShuftiPro.Tests
         {
             var verification = new ShuftiProOnSiteDocumentVerification();
 
-            Func<Task<ShuftiProOnSiteFeedback>> act = async () => await this.shuftiProClient.OnSiteDocumentVerificationAsync(verification);
+            Func<Task<ShuftiProOnSiteFeedback>> act = async () => await this.shuftiProClient.VerifyDocumentOnSiteAsync(verification);
             act.Should().Throw<ValidationException>();
         }
 
@@ -68,7 +68,26 @@ namespace ShuftiPro.Tests
                 Document = document
             };
 
-            var feedback = await this.shuftiProClient.OnSiteDocumentVerificationAsync(verification);
+            var feedback = await this.shuftiProClient.VerifyDocumentOnSiteAsync(verification);
+            feedback.Should().NotBeNull();
+            feedback.VerificationUrl.Should().NotBeEmpty();
+            feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);
+        }
+
+        [Test]
+        public async Task AddressVerification_ValidVerification_ReturnsFeedback()
+        {
+            var verification = new ShuftiProOnSiteAddressVerification()
+            {
+                Reference = Guid.NewGuid().ToString("N"),
+                CallbackUrl = "https://fake.com/api",
+                Address = new ShuftiProOnSiteAddress
+                {
+                    SupportedTypes = new AddressType[] { AddressType.IdCard, AddressType.TaxBill, AddressType.DrivingLicense }
+                }
+            };
+
+            var feedback = await this.shuftiProClient.VerifyAddressOnSiteAsync(verification);
             feedback.Should().NotBeNull();
             feedback.VerificationUrl.Should().NotBeEmpty();
             feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);

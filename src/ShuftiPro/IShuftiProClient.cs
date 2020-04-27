@@ -5,7 +5,10 @@ namespace ShuftiPro
 {
     public interface IShuftiProClient
     {
-        Task<ShuftiProOnSiteFeedback> OnSiteDocumentVerificationAsync(ShuftiProOnSiteDocumentVerification verification,
+        Task<ShuftiProOnSiteFeedback> VerifyDocumentOnSiteAsync(ShuftiProOnSiteDocumentVerification verification,
+            ShuftiProCredentials credentials = null);
+
+        Task<ShuftiProOnSiteFeedback> VerifyAddressOnSiteAsync(ShuftiProOnSiteAddressVerification verification,
             ShuftiProCredentials credentials = null);
     }
 }

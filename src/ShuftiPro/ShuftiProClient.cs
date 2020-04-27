@@ -9,6 +9,7 @@ using System.Security.Authentication;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using ShuftiPro.Exceptions;
 using ShuftiPro.OnSite;
 
 namespace ShuftiPro
@@ -20,7 +21,6 @@ namespace ShuftiPro
 
         public ShuftiProClient()
         {
-
         }
 
         public ShuftiProClient(ShuftiProCredentials credentials)
@@ -29,7 +29,14 @@ namespace ShuftiPro
             _credentials = credentials;
         }
 
-        public Task<ShuftiProOnSiteFeedback> OnSiteDocumentVerificationAsync(ShuftiProOnSiteDocumentVerification verification, ShuftiProCredentials credentials = null)
+        public Task<ShuftiProOnSiteFeedback> VerifyDocumentOnSiteAsync(ShuftiProOnSiteDocumentVerification verification, ShuftiProCredentials credentials = null)
+        {
+            EnsureRequestIsValid(verification);
+
+            return MakeCall<ShuftiProOnSiteFeedback>(HttpMethod.Post, null, verification, credentials);
+        }
+
+        public Task<ShuftiProOnSiteFeedback> VerifyAddressOnSiteAsync(ShuftiProOnSiteAddressVerification verification, ShuftiProCredentials credentials = null)
         {
             EnsureRequestIsValid(verification);
 
@@ -44,10 +51,17 @@ namespace ShuftiPro
             var requestContent = JsonConvert.SerializeObject(content);
             httpRequest.Content = new StringContent(requestContent, Encoding.UTF8, "application/json");
 
-            var response = await HttpClient.SendAsync(httpRequest);
-            var responseContent = await response.Content.ReadAsStringAsync();
+            try
+            {
+                var response = await HttpClient.SendAsync(httpRequest);
+                var responseContent = await response.Content.ReadAsStringAsync();
 
-            return JsonConvert.DeserializeObject<TResponse>(responseContent);
+                return JsonConvert.DeserializeObject<TResponse>(responseContent);
+            }
+            catch (Exception e)
+            {
+                throw new ShuftiProException(e.Message, e);
+            }
         }
 
         private AuthenticationHeaderValue GetAuthorizationHeader(ShuftiProCredentials credentials)
