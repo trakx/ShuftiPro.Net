@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.2</Version>
+    <Authors>Valentyn Stepanov</Authors>
+    <PackageProjectUrl>https://github.com/stenvix/ShuftiPro.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/stenvix/ShuftiPro.Net</RepositoryUrl>
+    <AssemblyVersion>0.0.0.2</AssemblyVersion>
+    <FileVersion>0.0.0.2</FileVersion>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>Valentyn Stepanov</Copyright>
+    <PackageId>ShuftiPro.Net</PackageId>
+    <Product>ShuftiPro.Net</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ShuftiPro.csproj.DotSettings" />
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

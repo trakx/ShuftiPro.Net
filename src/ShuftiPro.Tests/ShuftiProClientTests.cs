@@ -1,72 +1,51 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
+using System.Security.Authentication;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
-using ShuftiPro.Base;
 using ShuftiPro.Enums;
-using ShuftiPro.Exceptions;
 using ShuftiPro.OnSite;
 
 namespace ShuftiPro.Tests
 {
     public class Tests
     {
-        private string clientId;
-        private string secretKey;
-        private HttpClient httpClient;
-        private ShuftiProClientOptions options;
+        private ShuftiProCredentials options;
         private IShuftiProClient shuftiProClient;
 
         [SetUp]
         public void Setup()
         {
-            this.httpClient = new HttpClient();
-            this.options = new ShuftiProClientOptions
+            this.options = new ShuftiProCredentials
             {
                 ClientId = TestConfiguration.Configuration.GetValue<string>("ClientId"),
                 SecretKey = TestConfiguration.Configuration.GetValue<string>("SecretKey")
             };
-            this.shuftiProClient = new ShuftiProClient(this.httpClient, this.options);
+            this.shuftiProClient = new ShuftiProClient(this.options);
         }
 
         [Test]
-        public void Initialization_NullArguments_ThrowsException()
+        public void Initialization_NullCredentials_ThrowsException()
         {
-            FluentActions.Invoking(() => new ShuftiProClient(null, null))
-                .Should().Throw<ArgumentNullException>();
+            FluentActions.Invoking(() => new ShuftiProClient(null))
+                .Should().Throw<InvalidCredentialException>();
         }
 
         [Test]
-        public void Initialization_NullOptionArgument_ThrowsException()
+        public void Initialization_EmptyCredentials_ThrowsException()
         {
-            FluentActions.Invoking(() => new ShuftiProClient(new HttpClient(), null))
-                .Should().Throw<ArgumentNullException>();
+            FluentActions.Invoking(() => new ShuftiProClient(new ShuftiProCredentials()))
+                .Should().Throw<InvalidCredentialException>();
         }
 
         [Test]
         public void Initialization_ValidArguments_ShouldBeInitialized()
         {
-            var client = new ShuftiProClient(new HttpClient(), new ShuftiProClientOptions());
+            var client = new ShuftiProClient(this.options);
             client.Should().NotBeNull();
-        }
-
-        [Test]
-        public void Initialization_ValidArguments_ShouldSetAuthorizationHeader()
-        {
-            //Init
-
-            var options = new ShuftiProClientOptions { ClientId = "clientId", SecretKey = "secretId" };
-
-            //Act
-            var client = new ShuftiProClient(httpClient, options);
-
-            //Assert
-            client.Should().NotBeNull();
-            httpClient.DefaultRequestHeaders.Authorization.Should().NotBeNull();
-            httpClient.DefaultRequestHeaders.Authorization.Scheme.Should().NotBeEmpty();
-            httpClient.DefaultRequestHeaders.Authorization.Parameter.Should().NotBeEmpty();
         }
 
         [Test]
@@ -75,7 +54,7 @@ namespace ShuftiPro.Tests
             var verification = new ShuftiProOnSiteDocumentVerification();
 
             Func<Task<ShuftiProOnSiteFeedback>> act = async () => await this.shuftiProClient.OnSiteDocumentVerificationAsync(verification);
-            act.Should().Throw<ShuftiProException>();
+            act.Should().Throw<ValidationException>();
         }
 
         [Test]
