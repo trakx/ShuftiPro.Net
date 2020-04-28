@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using ShuftiPro.Enums;
 
-namespace ShuftiPro.Base
+namespace ShuftiPro.Services
 {
     public class ShuftiProDocumentData : ShuftiProDocumentBase
     {

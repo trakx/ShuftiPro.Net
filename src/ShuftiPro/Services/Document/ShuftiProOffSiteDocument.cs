@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
-using ShuftiPro.Base;
 
-namespace ShuftiPro.OffSite
+namespace ShuftiPro.Services
 {
-    public class ShuftiProOffSiteDocument : ShuftiProDocumentBase
+    public class ShuftiProOffSiteDocument : ShuftiProDocument
     {
         [Required]
         [JsonProperty("proof", Required = Required.Always)]

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
-using ShuftiPro.Enums;
+using ShuftiPro.Base;
 
-namespace ShuftiPro.Base
+namespace ShuftiPro.Services
 {
     public class ShuftiProDocumentBase
     {
-        [Required]
-        [JsonProperty("supported_types", Required = Required.Always)]
-        public ShuftiProDocumentType[] SupportedTypes { get; set; }
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
+        public ShuftiProName Name { get; set; }
 
         [JsonConverter(typeof(ShuftiProDateTimeConverter))]
         [JsonProperty("dob", NullValueHandling = NullValueHandling.Ignore)]
@@ -26,8 +25,5 @@ namespace ShuftiPro.Base
         [JsonConverter(typeof(ShuftiProDateTimeConverter))]
         [JsonProperty("expiry_date", NullValueHandling = NullValueHandling.Ignore)]
         public DateTime? ExpiryDate { get; set; }
-
-        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
-        public ShuftiProName Name { get; set; }
     }
 }

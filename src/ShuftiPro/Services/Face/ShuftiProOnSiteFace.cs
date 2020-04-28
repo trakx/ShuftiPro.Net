@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
-using ShuftiPro.Base;
 
-namespace ShuftiPro.OnSite
+namespace ShuftiPro.Services
 {
-    public class ShuftiProOnSiteDocument : ShuftiProDocument
+    public class ShuftiProOnSiteFace
     {
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_offline", NullValueHandling = NullValueHandling.Ignore)]

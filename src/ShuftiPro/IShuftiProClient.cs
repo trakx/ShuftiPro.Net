@@ -1,14 +1,11 @@
-﻿using System.Threading.Tasks;
-using ShuftiPro.OnSite;
+﻿using ShuftiPro.Services;
 
 namespace ShuftiPro
 {
     public interface IShuftiProClient
     {
-        Task<ShuftiProOnSiteFeedback> VerifyDocumentOnSiteAsync(ShuftiProOnSiteDocumentVerification verification,
-            ShuftiProCredentials credentials = null);
+        IShuftiProAddressService AddressService { get; }
 
-        Task<ShuftiProOnSiteFeedback> VerifyAddressOnSiteAsync(ShuftiProOnSiteAddressVerification verification,
-            ShuftiProCredentials credentials = null);
+        IShuftiProDocumentService DocumentService { get; }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using FluentAssertions;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using ShuftiPro.Base;
 using ShuftiPro.Enums;
+using ShuftiPro.Services;
 
 namespace ShuftiPro.Tests
 {
@@ -23,7 +23,7 @@ namespace ShuftiPro.Tests
         [Test]
         public void SerializeDocument_EmptyValues_ThrowsSerializationException()
         {
-            var document = new ShuftiProDocumentBase();
+            var document = new ShuftiProDocument();
 
             Action act = () => JsonConvert.SerializeObject(document);
 
@@ -33,7 +33,7 @@ namespace ShuftiPro.Tests
         [Test]
         public void SerializeDocument_ValidValues_BeSerialized()
         {
-            var document = new ShuftiProDocumentBase { SupportedTypes = new[] { ShuftiProDocumentType.IdCard } };
+            var document = new ShuftiProDocument { SupportedTypes = new[] { ShuftiProDocumentType.IdCard } };
             var result = JsonConvert.SerializeObject(document);
 
             result.Should().NotBeEmpty().And.BeEquivalentTo(@"{""supported_types"":[""id_card""]}");
