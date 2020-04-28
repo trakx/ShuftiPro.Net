@@ -3,9 +3,9 @@ using ShuftiPro.Enums;
 
 namespace ShuftiPro.Base
 {
-    public class ShuftiProDocumentInfo : ShuftiProDocumentBase
+    public class ShuftiProDocumentData : ShuftiProDocumentBase
     {
         [JsonProperty("selected_type")]
-        public DocumentType[] SelectedType { get; set; }
+        public ShuftiProDocumentType[] SelectedType { get; set; }
     }
 }

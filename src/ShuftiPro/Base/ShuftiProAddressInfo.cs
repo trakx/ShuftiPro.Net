@@ -6,6 +6,6 @@ namespace ShuftiPro.Base
     public class ShuftiProAddressInfo : ShuftiProAddressBase
     {
         [JsonProperty("selected_type")]
-        public DocumentType[] SelectedType { get; set; }
+        public ShuftiProDocumentType[] SelectedType { get; set; }
     }
 }

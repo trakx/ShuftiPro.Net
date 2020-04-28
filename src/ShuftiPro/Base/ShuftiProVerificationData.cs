@@ -8,6 +8,6 @@ namespace ShuftiPro.Base
         public ShuftiProAddressInfo Address { get; set; }
 
         [JsonProperty("document")]
-        public ShuftiProDocumentInfo Document { get; set; }
+        public ShuftiProDocumentData Document { get; set; }
     }
 }

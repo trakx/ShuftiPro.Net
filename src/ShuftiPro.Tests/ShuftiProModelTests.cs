@@ -33,7 +33,7 @@ namespace ShuftiPro.Tests
         [Test]
         public void SerializeDocument_ValidValues_BeSerialized()
         {
-            var document = new ShuftiProDocumentBase { SupportedTypes = new[] { DocumentType.IdCard } };
+            var document = new ShuftiProDocumentBase { SupportedTypes = new[] { ShuftiProDocumentType.IdCard } };
             var result = JsonConvert.SerializeObject(document);
 
             result.Should().NotBeEmpty().And.BeEquivalentTo(@"{""supported_types"":[""id_card""]}");

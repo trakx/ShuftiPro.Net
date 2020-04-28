@@ -9,7 +9,7 @@ namespace ShuftiPro.Base
     {
         [Required]
         [JsonProperty("supported_types", Required = Required.Always)]
-        public DocumentType[] SupportedTypes { get; set; }
+        public ShuftiProDocumentType[] SupportedTypes { get; set; }
 
         [JsonConverter(typeof(ShuftiProDateTimeConverter))]
         [JsonProperty("dob", NullValueHandling = NullValueHandling.Ignore)]

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using ShuftiPro.Enums;
 
 namespace ShuftiPro.Base
 {
@@ -8,7 +9,7 @@ namespace ShuftiPro.Base
         public string Reference { get; set; }
 
         [JsonProperty("event", Required = Required.Always)]
-        public string Event { get; set; }
+        public ShuftiProEvent Event { get; set; }
 
         [JsonProperty("email")]
         public string Email { get; set; }

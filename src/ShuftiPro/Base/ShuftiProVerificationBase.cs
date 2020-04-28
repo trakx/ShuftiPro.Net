@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
+using ShuftiPro.Enums;
 
 namespace ShuftiPro.Base
 {
@@ -32,7 +33,7 @@ namespace ShuftiPro.Base
         public string RedirectUrl { get; set; }
 
         [JsonProperty("verification_mode", NullValueHandling = NullValueHandling.Ignore)]
-        public VerificationMode? VerificationMode { get; set; }
+        public ShuftiProVerificationMode? VerificationMode { get; set; }
 
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("show_results", NullValueHandling = NullValueHandling.Ignore)]

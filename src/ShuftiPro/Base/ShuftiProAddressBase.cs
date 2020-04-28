@@ -8,7 +8,7 @@ namespace ShuftiPro.Base
     {
         [Required]
         [JsonProperty("supported_types", Required = Required.Always)]
-        public AddressType[] SupportedTypes { get; set; }
+        public ShuftiProAddressType[] SupportedTypes { get; set; }
 
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public ShuftiProName Name { get; set; }

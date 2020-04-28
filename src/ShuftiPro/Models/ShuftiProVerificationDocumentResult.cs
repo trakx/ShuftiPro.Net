@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ShuftiPro.Models
+namespace ShuftiPro
 {
     public class ShuftiProVerificationDocumentResult
     {
@@ -21,5 +21,8 @@ namespace ShuftiPro.Models
 
         [JsonProperty("document_must_not_be_expired")]
         public bool? DocumentMustNotBeExpired { get; set; }
+
+        [JsonProperty("document_proof")]
+        public bool? DocumentProof { get; set; }
     }
 }

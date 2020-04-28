@@ -15,6 +15,7 @@ namespace ShuftiPro.Tests
     {
         private ShuftiProCredentials options;
         private IShuftiProClient shuftiProClient;
+        private const string CallbackUrl = "https://webhook.site/3870c049-55f9-422e-8f73-deaa5efa50b3";
 
         [SetUp]
         public void Setup()
@@ -60,12 +61,20 @@ namespace ShuftiPro.Tests
         [Test]
         public async Task DocumentVerification_ValidVerification_ReturnsFeedback()
         {
-            var document = new ShuftiProOnSiteDocument { SupportedTypes = new[] { DocumentType.IdCard, DocumentType.CreditOrDebitCard, DocumentType.DrivingLicense, DocumentType.Passport } };
             var verification = new ShuftiProOnSiteDocumentVerification
             {
                 Reference = Guid.NewGuid().ToString("N"),
-                CallbackUrl = "https://fake.com/api",
-                Document = document
+                CallbackUrl = CallbackUrl,
+                Document = new ShuftiProOnSiteDocument
+                {
+                    SupportedTypes = new[]
+                    {
+                        ShuftiProDocumentType.IdCard,
+                        ShuftiProDocumentType.CreditOrDebitCard,
+                        ShuftiProDocumentType.DrivingLicense,
+                        ShuftiProDocumentType.Passport
+                    }
+                }
             };
 
             var feedback = await this.shuftiProClient.VerifyDocumentOnSiteAsync(verification);
@@ -80,10 +89,10 @@ namespace ShuftiPro.Tests
             var verification = new ShuftiProOnSiteAddressVerification()
             {
                 Reference = Guid.NewGuid().ToString("N"),
-                CallbackUrl = "https://fake.com/api",
+                CallbackUrl = CallbackUrl,
                 Address = new ShuftiProOnSiteAddress
                 {
-                    SupportedTypes = new AddressType[] { AddressType.IdCard, AddressType.TaxBill, AddressType.DrivingLicense }
+                    SupportedTypes = new[] { ShuftiProAddressType.IdCard, ShuftiProAddressType.TaxBill, ShuftiProAddressType.DrivingLicense }
                 }
             };
 

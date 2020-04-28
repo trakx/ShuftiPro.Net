@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using ShuftiPro.Models;
 
 namespace ShuftiPro
 {

@@ -2,10 +2,10 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace ShuftiPro
+namespace ShuftiPro.Enums
 {
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum VerificationMode
+    public enum ShuftiProVerificationMode
     {
         [EnumMember(Value = "any")]
         Any = 1,

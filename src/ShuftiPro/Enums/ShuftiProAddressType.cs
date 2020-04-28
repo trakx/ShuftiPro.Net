@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 namespace ShuftiPro.Enums
 {
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum AddressType
+    public enum ShuftiProAddressType
     {
         [EnumMember(Value = "id_card")]
         IdCard,

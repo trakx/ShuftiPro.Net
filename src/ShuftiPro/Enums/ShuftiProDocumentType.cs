@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 namespace ShuftiPro.Enums
 {
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum DocumentType
+    public enum ShuftiProDocumentType
     {
         [EnumMember(Value = "id_card")]
         IdCard,
