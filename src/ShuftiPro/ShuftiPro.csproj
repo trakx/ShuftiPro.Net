@@ -1,14 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.4</Version>
+    <Version>0.0.6</Version>
     <Authors>Valentyn Stepanov</Authors>
     <PackageProjectUrl>https://github.com/stenvix/ShuftiPro.Net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stenvix/ShuftiPro.Net</RepositoryUrl>
-    <AssemblyVersion>0.0.0.4</AssemblyVersion>
-    <FileVersion>0.0.0.4</FileVersion>
+    <AssemblyVersion>0.0.0.6</AssemblyVersion>
+    <FileVersion>0.0.0.6</FileVersion>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Copyright>Valentyn Stepanov</Copyright>
     <PackageId>ShuftiPro.Net</PackageId>
@@ -26,10 +26,6 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="OnSite\" />
   </ItemGroup>
 
 </Project>

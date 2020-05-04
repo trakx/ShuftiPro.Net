@@ -7,6 +7,9 @@ namespace ShuftiPro.Enums
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ShuftiProDocumentType
     {
+        [EnumMember(Value = "")]
+        Undefined,
+
         [EnumMember(Value = "id_card")]
         IdCard,
 

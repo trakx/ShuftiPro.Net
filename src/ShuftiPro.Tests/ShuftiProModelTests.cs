@@ -2,7 +2,6 @@
 using FluentAssertions;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using ShuftiPro.Base;
 using ShuftiPro.Enums;
 using ShuftiPro.Services;
 

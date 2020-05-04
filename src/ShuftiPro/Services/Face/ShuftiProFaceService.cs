@@ -1,10 +1,9 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using ShuftiPro.OnSite;
 
 namespace ShuftiPro.Services
 {
-    public class ShuftiProFaceService : ShuftiProServiceBase, IShuftiProFaceService
+    internal class ShuftiProFaceService : ShuftiProServiceBase, IShuftiProFaceService
     {
         public ShuftiProFaceService(HttpClient httpClient) : base(httpClient)
         {

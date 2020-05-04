@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
-using ShuftiPro.Services;
 
-namespace ShuftiPro.Base
+namespace ShuftiPro.Services
 {
     public class ShuftiProVerificationData
     {
@@ -10,5 +9,8 @@ namespace ShuftiPro.Base
 
         [JsonProperty("document")]
         public ShuftiProDocumentData Document { get; set; }
+
+        [JsonProperty("background_checks")]
+        public ShuftiProBackgroundCheckData BackgroundCheck { get; set; }
     }
 }

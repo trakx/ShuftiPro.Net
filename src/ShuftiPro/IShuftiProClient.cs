@@ -1,4 +1,5 @@
-﻿using ShuftiPro.Services;
+﻿using System.Threading.Tasks;
+using ShuftiPro.Services;
 
 namespace ShuftiPro
 {
@@ -7,5 +8,11 @@ namespace ShuftiPro
         IShuftiProAddressService AddressService { get; }
 
         IShuftiProDocumentService DocumentService { get; }
+
+        IShuftiProBackgroundCheckService BackgroundCheckService { get; set; }
+
+        IShuftiProFaceService FaceService { get; }
+
+        Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference);
     }
 }

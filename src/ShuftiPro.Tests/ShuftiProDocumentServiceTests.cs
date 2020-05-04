@@ -2,28 +2,20 @@
 using System.IO;
 using System.Threading.Tasks;
 using FluentAssertions;
-using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using ShuftiPro.Enums;
 using ShuftiPro.Services;
 
 namespace ShuftiPro.Tests
 {
-    public class ShuftiProDocumentServiceTests
+    public class ShuftiProDocumentServiceTests : ShuftiProServiceTestBase
     {
-        private ShuftiProCredentials credentials;
-        private IShuftiProDocumentService service;
-        private const string CallbackUrl = "https://webhook.site/3870c049-55f9-422e-8f73-deaa5efa50b3";
+        private IShuftiProDocumentService documentService;
 
-        [SetUp]
-        public void Setup()
+        public override void Setup()
         {
-            this.credentials = new ShuftiProCredentials
-            {
-                ClientId = TestConfiguration.Configuration.GetValue<string>("ClientId"),
-                SecretKey = TestConfiguration.Configuration.GetValue<string>("SecretKey")
-            };
-            this.service = new ShuftiProClient(credentials).DocumentService;
+            base.Setup();
+            this.documentService = new ShuftiProClient(Credentials).DocumentService;
         }
 
         [Test]
@@ -41,11 +33,12 @@ namespace ShuftiPro.Tests
                         ShuftiProDocumentType.CreditOrDebitCard,
                         ShuftiProDocumentType.DrivingLicense,
                         ShuftiProDocumentType.Passport
-                    }
+                    },
+                    FetchEnhancedData = true
                 }
             };
 
-            var feedback = await this.service.VerifyOnSiteAsync(verification);
+            var feedback = await this.documentService.VerifyOnSiteAsync(verification);
             feedback.Should().NotBeNull();
             feedback.VerificationUrl.Should().NotBeEmpty();
             feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);
@@ -74,9 +67,11 @@ namespace ShuftiPro.Tests
                 }
             };
 
-            var feedback = await this.service.VerifyOffSiteAsync(verification);
+            var feedback = await this.documentService.VerifyOffSiteAsync(verification);
             feedback.Should().NotBeNull();
             feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);
+            feedback.Data.Should().NotBeNull();
+            feedback.Result.Should().NotBeNull();
         }
     }
 }

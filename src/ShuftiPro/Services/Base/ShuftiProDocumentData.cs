@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 using ShuftiPro.Enums;
 
 namespace ShuftiPro.Services
@@ -7,5 +8,8 @@ namespace ShuftiPro.Services
     {
         [JsonProperty("selected_type")]
         public ShuftiProDocumentType[] SelectedType { get; set; }
+
+        [JsonProperty("supported_types", Required = Required.Always)]
+        public ShuftiProDocumentType[] SupportedTypes { get; set; }
     }
 }

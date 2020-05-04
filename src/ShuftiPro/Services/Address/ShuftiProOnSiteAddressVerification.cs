@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace ShuftiPro.OnSite
+namespace ShuftiPro.Services
 {
     public class ShuftiProOnSiteAddressVerification : ShuftiProOnSiteVerification
     {

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ShuftiPro.Base
+namespace ShuftiPro.Services
 {
     public class ShuftiProDocumentResult
     {

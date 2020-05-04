@@ -12,7 +12,7 @@ namespace ShuftiPro.Services
 
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("fetch_enhanced_data", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public bool FetchEnhancedData { get; set; }
+        public bool? FetchEnhancedData { get; set; }
 
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("backside_proof_required", NullValueHandling = NullValueHandling.Ignore)]

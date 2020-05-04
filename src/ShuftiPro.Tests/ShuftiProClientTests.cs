@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
-using ShuftiPro.Enums;
-using ShuftiPro.OnSite;
 using ShuftiPro.Services;
 
 namespace ShuftiPro.Tests
@@ -15,7 +13,6 @@ namespace ShuftiPro.Tests
     {
         private ShuftiProCredentials options;
         private IShuftiProClient shuftiProClient;
-        
 
         [SetUp]
         public void Setup()
@@ -57,25 +54,59 @@ namespace ShuftiPro.Tests
             Func<Task<ShuftiProOnSiteFeedback>> act = async () => await this.shuftiProClient.DocumentService.VerifyOnSiteAsync(verification);
             act.Should().Throw<ValidationException>();
         }
-        
 
-        //[Test]
-        //public async Task AddressVerification_ValidVerification_ReturnsFeedback()
-        //{
-        //    var verification = new ShuftiProOnSiteAddressVerification()
-        //    {
-        //        Reference = Guid.NewGuid().ToString("N"),
-        //        CallbackUrl = CallbackUrl,
-        //        Address = new ShuftiProOnSiteAddress
-        //        {
-        //            SupportedTypes = new[] { ShuftiProAddressType.IdCard, ShuftiProAddressType.TaxBill, ShuftiProAddressType.DrivingLicense }
-        //        }
-        //    };
+        [Test]
+        public async Task GetStatus_ValidReference_ReturnsStatus()
+        {
+            var refer = "a0f101ee8a4949839329a85303e6e0e2";
+            var reference = new ShuftiProReference { Reference = refer };
+            var status = await this.shuftiProClient.GetStatusAsync(reference);
+            status.Should().NotBeNull();
+            status.Reference.Should().NotBeNullOrEmpty().And.BeEquivalentTo(refer);
+            status.Data.Should().NotBeNull();
+            status.Result.Should().NotBeNull();
+        }
 
-        //    var feedback = await this.shuftiProClient.VerifyAddressOnSiteAsync(verification);
-        //    feedback.Should().NotBeNull();
-        //    feedback.VerificationUrl.Should().NotBeEmpty();
-        //    feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);
-        //}
+        [Test]
+        public async Task GetStatus_ReferenceWithProof_ReturnsStatus()
+        {
+            var refer = "180e1c042d724d538bfbf2c900fd7548";
+            var reference = new ShuftiProReference { Reference = refer };
+            var status = await this.shuftiProClient.GetStatusAsync(reference);
+            status.Should().NotBeNull();
+            status.Reference.Should().NotBeNullOrEmpty().And.BeEquivalentTo(refer);
+            status.Proofs.Should().NotBeNull();
+            status.Result.Should().NotBeNull();
+        }
+
+        [Test]
+        public async Task GetStatus_ReferenceWithDocument_ReturnsStatus()
+        {
+            var refer = "ad10c3ffb9684bc18d01f33b760a9479";
+            var reference = new ShuftiProReference { Reference = refer };
+            var status = await this.shuftiProClient.GetStatusAsync(reference);
+            status.Should().NotBeNull();
+            status.Reference.Should().NotBeNullOrEmpty().And.BeEquivalentTo(refer);
+            status.Proofs.Should().NotBeNull();
+            status.Result.Should().NotBeNull();
+            status.AdditionalData.Should().NotBeNull();
+            status.AdditionalData.Document.Should().NotBeNull();
+            status.AdditionalData.Document.Proof.Should().NotBeNull();
+            status.AdditionalData.Document.ProofDict.Should().NotBeEmpty();
+        }
+
+        [Test]
+        public async Task GetStatus_ReferenceWithAddress_ReturnsStatus()
+        {
+            var refer = "87dc8ca2744d4ad0ae3dc2094edaa1b4";
+            var reference = new ShuftiProReference { Reference = refer };
+            var status = await this.shuftiProClient.GetStatusAsync(reference);
+            status.Should().NotBeNull();
+            status.Reference.Should().NotBeNullOrEmpty().And.BeEquivalentTo(refer);
+            status.Proofs.Should().NotBeNull();
+            status.Result.Should().NotBeNull();
+            status.Data.Should().NotBeNull();
+            status.Data.Address.Should().NotBeNull();
+        }
     }
 }

@@ -1,10 +1,9 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using ShuftiPro.OnSite;
 
 namespace ShuftiPro.Services
 {
-    public class ShuftiProAddressService : ShuftiProServiceBase, IShuftiProAddressService
+    internal class ShuftiProAddressService : ShuftiProServiceBase, IShuftiProAddressService
     {
         public ShuftiProAddressService(HttpClient httpClient) : base(httpClient)
         {
@@ -14,7 +13,7 @@ namespace ShuftiPro.Services
         {
         }
 
-        public Task<ShuftiProOnSiteFeedback> VerifyOnSiteAsync(ShuftiProOnSiteAddressVerification verification, ShuftiProCredentials credentials)
+        public Task<ShuftiProOnSiteFeedback> VerifyOnSiteAsync(ShuftiProOnSiteAddressVerification verification, ShuftiProCredentials credentials = null)
         {
             this.EnsureRequestIsValid(verification);
 

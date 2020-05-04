@@ -1,10 +1,9 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using ShuftiPro.OnSite;
 
 namespace ShuftiPro.Services
 {
-    public class ShuftiProDocumentService : ShuftiProServiceBase, IShuftiProDocumentService
+    internal class ShuftiProDocumentService : ShuftiProServiceBase, IShuftiProDocumentService
     {
         public ShuftiProDocumentService(HttpClient httpClient) : base(httpClient)
         {
