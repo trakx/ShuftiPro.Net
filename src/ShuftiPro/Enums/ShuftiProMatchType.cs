@@ -17,6 +17,9 @@ namespace ShuftiPro.Enums
         AkaExact,
 
         [EnumMember(Value = "equivalent_aka")]
-        EquivalentAka
+        EquivalentAka,
+
+        [EnumMember(Value = "name_exact")]
+        NameExact
     }
 }

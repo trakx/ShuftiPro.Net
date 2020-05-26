@@ -20,6 +20,9 @@ namespace ShuftiPro.Enums
         DrivingLicense,
 
         [EnumMember(Value = "credit_or_debit_card")]
-        CreditOrDebitCard
+        CreditOrDebitCard,
+
+        [EnumMember(Value = "tax_bill")]
+        TaxBill
     }
 }

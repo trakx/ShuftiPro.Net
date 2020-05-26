@@ -14,10 +14,10 @@ namespace ShuftiPro.Services
         {
         }
 
-        public Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference)
+        public Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials credentials)
         {
             this.EnsureRequestIsValid(reference);
-            return this.MakeCall<ShuftiProStatus>(HttpMethod.Post, new Uri("status", UriKind.Relative), reference, Credentials);
+            return this.MakeCall<ShuftiProStatus>(HttpMethod.Post, new Uri("status", UriKind.Relative), reference, credentials);
         }
     }
 }

@@ -40,6 +40,6 @@ namespace ShuftiPro.Services
         public string[] Sources { get; set; }
 
         [JsonProperty("types")]
-        public string[] Types { get; set; }
+        public ShuftiProAmlType[] Types { get; set; }
     }
 }

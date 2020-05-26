@@ -35,7 +35,6 @@ namespace ShuftiPro
         public IShuftiProBackgroundCheckService BackgroundCheckService { get; set; }
 
         public IShuftiProFaceService FaceService { get; }
-
-        public Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference) => this.statusService.GetStatusAsync(reference);
+        public Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials credentials = null) => this.statusService.GetStatusAsync(reference, credentials);
     }
 }

@@ -13,6 +13,6 @@ namespace ShuftiPro
 
         IShuftiProFaceService FaceService { get; }
 
-        Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference);
+        Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials credentials = null);
     }
 }
