@@ -23,6 +23,24 @@ namespace ShuftiPro.Enums
         CreditOrDebitCard,
 
         [EnumMember(Value = "tax_bill")]
-        TaxBill
+        TaxBill,
+
+        [EnumMember(Value = "utility_bill")]
+        UtilityBill,
+
+        [EnumMember(Value = "bank_statement")]
+        BankStatement,
+
+        [EnumMember(Value = "rent_agreement")]
+        RentAgreement,
+
+        [EnumMember(Value = "employer_letter")]
+        EmployerLetter,
+
+        [EnumMember(Value = "insurance_agreement")]
+        InsuranceAgreement,
+
+        [EnumMember(Value = "envelope")]
+        Envelope,
     }
 }

@@ -8,6 +8,12 @@ namespace ShuftiPro.Services
         [JsonProperty("reference", Required = Required.Always)]
         public string Reference { get; set; }
 
+        [JsonProperty("declined_reason")]
+        public string DeclinedReason { get; set; }
+
+        [JsonProperty("declined_codes")]
+        public string[] DeclinedCodes { get; set; }
+
         [JsonProperty("event", Required = Required.Always)]
         public ShuftiProEvent Event { get; set; }
 

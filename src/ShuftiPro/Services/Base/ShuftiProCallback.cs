@@ -10,6 +10,9 @@ namespace ShuftiPro.Services
         [JsonProperty("declined_reason")]
         public string DeclinedReason { get; set; }
 
+        [JsonProperty("declined_codes")]
+        public string[] DeclinedCodes { get; set; }
+
         [JsonProperty("verification_data")]
         public ShuftiProVerificationData VerificationData { get; set; }
 
