@@ -37,5 +37,22 @@ namespace ShuftiPro.Tests
 
             result.Should().NotBeEmpty().And.BeEquivalentTo(@"{""supported_types"":[""id_card""]}");
         }
+
+        [Test]
+        public void SerializeStatus_ValidObject_BeSerialized()
+        {
+            var status = new ShuftiProStatus
+            {
+                Reference = "reference",
+                Event = ShuftiProEvent.RequestDeleted,
+                Data = null
+            };
+
+            var statusJson = JsonConvert.SerializeObject(status);
+            statusJson.Should().NotBeEmpty();
+
+            status = JsonConvert.DeserializeObject<ShuftiProStatus>(statusJson);
+            status.Should().NotBeNull();
+        }
     }
 }

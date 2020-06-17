@@ -1,0 +1,43 @@
+{
+  "reference": "1wMAAAAAAADIsIafcgEAAAilWX5S",
+  "event": "verification.accepted",
+  "country": null,
+  "proofs": {
+    "face": {
+      "proof": "https://shuftipro.com/api/storage/LRYwJmUctTQQorGWYAEDtw1rkTv8Jvx8QrwNYVHgbahnR9OemXyBph0NgnRvyAZJ/face/proof.png?access_token=c67499ccd4d7595e1679e1b2bcef1c0a4f36f5a0"
+    }
+  },
+  "verification_data": [],
+  "verification_result": {
+    "face": 1
+  },
+  "info": {
+    "agent": {
+      "is_desktop": true,
+      "is_phone": false,
+      "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+      "device_name": "WebKit",
+      "browser_name": "",
+      "platform_name": "Windows-10.0"
+    },
+    "geolocation": {
+      "host": "91.213.101.2",
+      "ip": "91.213.101.2",
+      "rdns": "91.213.101.2",
+      "asn": "21317",
+      "isp": "Everymatrix SRL",
+      "country_name": "Romania",
+      "country_code": "RO",
+      "region_name": "",
+      "region_code": "",
+      "city": "",
+      "postal_code": "",
+      "continent_name": "Europe",
+      "continent_code": "EU",
+      "latitude": "45.9968",
+      "longitude": "24.997",
+      "metro_code": "",
+      "timezone": "Europe/Bucharest"
+    }
+  }
+}
