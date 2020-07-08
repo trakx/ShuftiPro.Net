@@ -16,7 +16,7 @@ namespace ShuftiPro.Services
         public float Score { get; set; }
 
         [JsonProperty("match_types")]
-        public ShuftiProMatchType[] MatchTypes { get; set; }
+        public string[] MatchTypes { get; set; }
 
         [JsonProperty("alternative_names")]
         public string[] AlternativeNames { get; set; }
