@@ -2,7 +2,7 @@
 
 namespace ShuftiPro.Services
 {
-    public abstract class ShuftiProOnSiteVerification : ShuftiProVerificationBase
+    public abstract class ShuftiProOnSiteVerificationBase : ShuftiProVerificationBase
     {
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_offline", NullValueHandling = NullValueHandling.Ignore)]

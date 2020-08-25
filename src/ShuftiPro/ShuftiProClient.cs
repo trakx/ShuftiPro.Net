@@ -9,6 +9,7 @@ namespace ShuftiPro
     {
         private static readonly HttpClient HttpClient = new HttpClient { BaseAddress = new Uri("https://api.shuftipro.com") };
         private readonly ShuftiProStatusService statusService;
+        private readonly ShuftiProOnSiteService onSiteService;
 
         public ShuftiProClient()
         {
@@ -17,6 +18,7 @@ namespace ShuftiPro
             this.FaceService = new ShuftiProFaceService(HttpClient);
             this.BackgroundCheckService = new ShuftiProBackgroundCheckService(HttpClient);
             this.statusService = new ShuftiProStatusService(HttpClient);
+            this.onSiteService = new ShuftiProOnSiteService(HttpClient);
         }
 
         public ShuftiProClient(ShuftiProCredentials credentials)
@@ -26,15 +28,19 @@ namespace ShuftiPro
             this.FaceService = new ShuftiProFaceService(HttpClient, credentials);
             this.BackgroundCheckService = new ShuftiProBackgroundCheckService(HttpClient, credentials);
             this.statusService = new ShuftiProStatusService(HttpClient, credentials);
+            this.onSiteService = new ShuftiProOnSiteService(HttpClient, credentials);
         }
 
         public IShuftiProAddressService AddressService { get; }
 
         public IShuftiProDocumentService DocumentService { get; }
 
-        public IShuftiProBackgroundCheckService BackgroundCheckService { get; set; }
+        public IShuftiProBackgroundCheckService BackgroundCheckService { get; }
 
         public IShuftiProFaceService FaceService { get; }
+
         public Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials credentials = null) => this.statusService.GetStatusAsync(reference, credentials);
+
+        public Task<ShuftiProOnSiteFeedback> VerifyOnSiteAsync(ShuftiProOnSiteVerification verification, ShuftiProCredentials credentials = null) => this.onSiteService.VerifyOnSiteAsync(verification, credentials);
     }
 }

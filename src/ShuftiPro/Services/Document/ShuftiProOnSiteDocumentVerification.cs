@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace ShuftiPro.Services
 {
-    public class ShuftiProOnSiteDocumentVerification : ShuftiProOnSiteVerification
+    public class ShuftiProOnSiteDocumentVerification : ShuftiProOnSiteVerificationBase
     {
         [Required]
         [JsonProperty("document", Required = Required.Always)]

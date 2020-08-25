@@ -9,10 +9,12 @@ namespace ShuftiPro
 
         IShuftiProDocumentService DocumentService { get; }
 
-        IShuftiProBackgroundCheckService BackgroundCheckService { get; set; }
+        IShuftiProBackgroundCheckService BackgroundCheckService { get; }
 
         IShuftiProFaceService FaceService { get; }
 
         Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials credentials = null);
+
+        Task<ShuftiProOnSiteFeedback> VerifyOnSiteAsync(ShuftiProOnSiteVerification verification, ShuftiProCredentials credentials = null);
     }
 }

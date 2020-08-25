@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
+using ShuftiPro.Enums;
 using ShuftiPro.Services;
 
 namespace ShuftiPro.Tests
 {
-    public class Tests
+    public class ShuftiProClientTests : ShuftiProServiceTestBase
     {
         private ShuftiProCredentials options;
         private IShuftiProClient shuftiProClient;
@@ -58,7 +59,7 @@ namespace ShuftiPro.Tests
         [Test]
         public async Task GetStatus_ValidReference_ReturnsStatus()
         {
-            var refer = "a0f101ee8a4949839329a85303e6e0e2";
+            var refer = "bAQAAAAAAABRPpIJcwEAAP1dWtWZ";
             var reference = new ShuftiProReference { Reference = refer };
             var status = await this.shuftiProClient.GetStatusAsync(reference);
             status.Should().NotBeNull();
@@ -107,6 +108,37 @@ namespace ShuftiPro.Tests
             status.Result.Should().NotBeNull();
             status.Data.Should().NotBeNull();
             status.Data.Address.Should().NotBeNull();
+        }
+
+        [Test]
+        public async Task VerifyOnSite_ValidRequest_ReturnsFeedback()
+        {
+            var verification = new ShuftiProOnSiteVerification
+            {
+                Reference = Reference,
+                CallbackUrl = CallbackUrl,
+                Face = new ShuftiProOnSiteFace
+                {
+                    AllowOffline = false,
+                    AllowOnline = true
+                },
+                Document = new ShuftiProOnSiteDocument
+                {
+                    SupportedTypes = new[]
+                    {
+                        ShuftiProDocumentType.IdCard,
+                        ShuftiProDocumentType.CreditOrDebitCard,
+                        ShuftiProDocumentType.DrivingLicense,
+                        ShuftiProDocumentType.Passport
+                    },
+                    FetchEnhancedData = true
+                }
+            };
+
+            var feedback = await this.shuftiProClient.VerifyOnSiteAsync(verification);
+            feedback.Should().NotBeNull();
+            feedback.VerificationUrl.Should().NotBeEmpty();
+            feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);
         }
     }
 }

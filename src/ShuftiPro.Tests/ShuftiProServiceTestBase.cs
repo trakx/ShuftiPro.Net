@@ -7,7 +7,7 @@ namespace ShuftiPro.Tests
     public abstract class ShuftiProServiceTestBase
     {
         protected ShuftiProCredentials Credentials;
-        protected const string CallbackUrl = "https://webhook.site/3870c049-55f9-422e-8f73-deaa5efa50b3";
+        protected const string CallbackUrl = "https://webhook.site/c3f7605b-587c-4e1b-98f2-119bba6b7df0";
 
         [SetUp]
         public virtual void Setup()
