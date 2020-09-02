@@ -13,6 +13,10 @@ namespace ShuftiPro.Services
         public bool? AllowOnline { get; set; }
 
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
+        [JsonProperty("allow_retry", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? AllowRetry { get; set; }
+
+        [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("show_consent", NullValueHandling = NullValueHandling.Ignore)]
         public bool? ShowConsent { get; set; }
 
