@@ -54,10 +54,10 @@ namespace ShuftiPro.Services
         public DateTime? IssueDate { get; set; }
 
         [JsonProperty("height")]
-        public int Height { get; set; }
+        public string Height { get; set; }
 
         [JsonProperty("authority")]
-        public int Authority { get; set; }
+        public string Authority { get; set; }
 
         [JsonProperty("first_name_native")]
         public string FirstNameNative { get; set; }
