@@ -1,4 +1,8 @@
 ﻿using Newtonsoft.Json;
+using ShuftiPro.Services.Address;
+using ShuftiPro.Services.Base;
+using ShuftiPro.Services.Document;
+using ShuftiPro.Services.Face;
 
 namespace ShuftiPro.Services
 {

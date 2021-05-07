@@ -6,7 +6,11 @@ using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using ShuftiPro.Enums;
+using ShuftiPro.Options;
 using ShuftiPro.Services;
+using ShuftiPro.Services.Base;
+using ShuftiPro.Services.Document;
+using ShuftiPro.Services.Face;
 
 namespace ShuftiPro.Tests
 {

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Address
 {
     public class ShuftiProAddressResult
     {

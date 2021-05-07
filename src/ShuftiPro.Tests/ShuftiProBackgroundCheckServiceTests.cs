@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using FluentAssertions;
 using NUnit.Framework;
 using ShuftiPro.Services;
+using ShuftiPro.Services.BackgroundCheck;
+using ShuftiPro.Services.Base;
 
 namespace ShuftiPro.Tests
 {

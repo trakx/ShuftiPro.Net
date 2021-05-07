@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
+using ShuftiPro.Services.Base;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Document
 {
     public class ShuftiProOffSiteDocumentVerification : ShuftiProVerificationBase
     {

@@ -1,4 +1,4 @@
-﻿namespace ShuftiPro.Services
+﻿namespace ShuftiPro.Services.BackgroundCheck
 {
     public class ShuftiProField
     {

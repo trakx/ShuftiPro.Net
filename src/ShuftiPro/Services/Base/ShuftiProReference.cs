@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Base
 {
     public class ShuftiProReference
     {

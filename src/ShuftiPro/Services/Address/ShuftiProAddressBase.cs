@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 using ShuftiPro.Enums;
+using ShuftiPro.Services.Base;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Address
 {
     public class ShuftiProAddressBase
     {

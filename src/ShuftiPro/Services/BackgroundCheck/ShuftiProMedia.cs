@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.BackgroundCheck
 {
     public class ShuftiProMedia
     {

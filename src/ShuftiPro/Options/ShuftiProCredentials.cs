@@ -1,4 +1,4 @@
-﻿namespace ShuftiPro
+﻿namespace ShuftiPro.Options
 {
     public class ShuftiProCredentials
     {

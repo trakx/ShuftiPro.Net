@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Converters;
 
-namespace ShuftiPro
+namespace ShuftiPro.Converters
 {
     internal class ShuftiProDateTimeConverter : IsoDateTimeConverter
     {

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
+using ShuftiPro.Converters;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Face
 {
     public class ShuftiProOnSiteFace
     {

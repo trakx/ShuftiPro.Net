@@ -33,5 +33,11 @@ namespace ShuftiPro.Enums
 
         [EnumMember(Value = "tax_bill")]
         TaxBill,
+
+        [EnumMember(Value = "envelope")]
+        Envelope,
+
+        [EnumMember(Value = "cpr_smart_card_reader_copy")]
+        CprSmartCardReaderCopy
     }
 }

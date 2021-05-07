@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using ShuftiPro.Enums;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Address
 {
     public class ShuftiProAddressInfo : ShuftiProAddressBase
     {

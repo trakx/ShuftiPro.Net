@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using ShuftiPro.Converters;
 using ShuftiPro.Enums;
+using ShuftiPro.Models;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Base
 {
     public class ShuftiProStatus
     {

@@ -5,6 +5,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using ShuftiPro.Enums;
 using ShuftiPro.Services;
+using ShuftiPro.Services.Document;
 
 namespace ShuftiPro.Tests
 {

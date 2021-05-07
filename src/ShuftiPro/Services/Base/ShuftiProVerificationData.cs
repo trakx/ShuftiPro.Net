@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
+using ShuftiPro.Services.Address;
+using ShuftiPro.Services.BackgroundCheck;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Base
 {
     public class ShuftiProVerificationData
     {

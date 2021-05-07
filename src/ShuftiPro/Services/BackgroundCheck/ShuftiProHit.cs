@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using ShuftiPro.Enums;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.BackgroundCheck
 {
     public class ShuftiProHit
     {

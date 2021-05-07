@@ -1,7 +1,13 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using ShuftiPro.Options;
 using ShuftiPro.Services;
+using ShuftiPro.Services.Address;
+using ShuftiPro.Services.BackgroundCheck;
+using ShuftiPro.Services.Base;
+using ShuftiPro.Services.Document;
+using ShuftiPro.Services.Face;
 
 namespace ShuftiPro
 {

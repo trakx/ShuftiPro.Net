@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace ShuftiPro
+namespace ShuftiPro.Converters
 {
     internal class ShuftiProBoolToIntConverter : JsonConverter
     {

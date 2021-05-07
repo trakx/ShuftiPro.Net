@@ -10,8 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using ShuftiPro.Exceptions;
+using ShuftiPro.Options;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Base
 {
     public class ShuftiProServiceBase
     {

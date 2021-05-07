@@ -1,9 +1,9 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace ShuftiPro
+namespace ShuftiPro.Converters
 {
-    public class ShuftiProEmptyArrayToObjectConverter : JsonConverter
+    internal class ShuftiProEmptyArrayToObjectConverter : JsonConverter
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {

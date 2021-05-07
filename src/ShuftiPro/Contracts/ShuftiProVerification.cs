@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
+using ShuftiPro.Converters;
 using ShuftiPro.Enums;
 
 namespace ShuftiPro.Contracts
@@ -51,7 +52,7 @@ namespace ShuftiPro.Contracts
         public string Email { get; set; }
 
         /// <summary>
-        /// 
+        /// Types of proof that can be used for verification
         /// </summary>
         [JsonProperty("verification_mode", NullValueHandling = NullValueHandling.Ignore)]
         public ShuftiProVerificationMode? VerificationMode { get; set; }
@@ -64,35 +65,50 @@ namespace ShuftiPro.Contracts
         public bool? ShowResults { get; set; }
 
         /// <summary>
-        /// 
+        /// Decline the entire verification request when any one of the verification steps fails
         /// </summary>
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("decline_on_single_step", NullValueHandling = NullValueHandling.Ignore)]
         public bool? DeclineOnSingleStep { get; set; }
 
         /// <summary>
-        /// 
+        /// Allow users to upload images or videos in case of non-availability of a functional webcam
         /// </summary>
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_offline", NullValueHandling = NullValueHandling.Ignore)]
         public bool? AllowOffline { get; set; }
 
+        /// <summary>
+        /// Allow users to capture image or videos in real-time when internet is available
+        /// </summary>
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_online", NullValueHandling = NullValueHandling.Ignore)]
         public bool? AllowOnline { get; set; }
 
+        /// <summary>
+        /// End-user will be able to retry if verification request is declined by AI
+        /// </summary>
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_retry", NullValueHandling = NullValueHandling.Ignore)]
         public bool? AllowRetry { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("show_consent", NullValueHandling = NullValueHandling.Ignore)]
         public bool? ShowConsent { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("show_privacy_policy", NullValueHandling = NullValueHandling.Ignore)]
         public bool? ShowPrivacyPolicy { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("show_feedback_form", NullValueHandling = NullValueHandling.Ignore)]
         public bool? ShowFeedbackForm { get; set; }
@@ -102,5 +118,35 @@ namespace ShuftiPro.Contracts
         /// </summary>
         [JsonProperty("ttl", NullValueHandling = NullValueHandling.Ignore)]
         public int? TimeToLive { get; set; }
+
+        /// <summary>
+        /// Field corresponds to Face Verification service
+        /// </summary>
+        [JsonProperty("face", NullValueHandling = NullValueHandling.Ignore)]
+        public ShuftiProFace Face { get; set; }
+
+        /// <summary>
+        /// Field corresponds to Address Verification service
+        /// </summary>
+        [JsonProperty("address", NullValueHandling = NullValueHandling.Ignore)]
+        public ShuftiProAddress Address { get; set; }
+
+        /// <summary>
+        /// Field corresponds to Document Verification service
+        /// </summary>
+        [JsonProperty("document", NullValueHandling = NullValueHandling.Ignore)]
+        public ShuftiProDocument Document { get; set; }
+
+        /// <summary>
+        /// Field corresponds to Second Document Verification service
+        /// </summary>
+        [JsonProperty("document_two", NullValueHandling = NullValueHandling.Ignore)]
+        public ShuftiProDocument DocumentTwo { get; set; }
+
+        /// <summary>
+        /// Field corresponds to Background Check Verification service
+        /// </summary>
+        [JsonProperty("background_checks", NullValueHandling = NullValueHandling.Ignore)]
+        public ShuftiProBackgroundCheck BackgroundCheck { get; set; }
     }
 }

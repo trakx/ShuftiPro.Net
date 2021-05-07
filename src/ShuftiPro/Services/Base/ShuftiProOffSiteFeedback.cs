@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
+using ShuftiPro.Models;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Base
 {
     public class ShuftiProOffSiteFeedback : ShuftiProFeedbackBase
     {

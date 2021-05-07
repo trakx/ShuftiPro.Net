@@ -1,7 +1,9 @@
 ﻿using System;
 using Newtonsoft.Json;
+using ShuftiPro.Converters;
+using ShuftiPro.Services.Base;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.BackgroundCheck
 {
     public class ShuftiProBackgroundCheckData
     {

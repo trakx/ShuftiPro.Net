@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
+using ShuftiPro.Options;
 
 namespace ShuftiPro.Tests
 {

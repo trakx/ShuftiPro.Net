@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using ShuftiPro.Enums;
 
-namespace ShuftiPro.Services
+namespace ShuftiPro.Services.Base
 {
     public class ShuftiProFeedbackBase
     {

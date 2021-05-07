@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using ShuftiPro.Enums;
 using ShuftiPro.Services;
+using ShuftiPro.Services.Base;
 
 namespace ShuftiPro.Tests
 {
