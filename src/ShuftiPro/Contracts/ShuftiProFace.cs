@@ -4,7 +4,7 @@ namespace ShuftiPro.Contracts
 {
     public class ShuftiProFace : IShuftiProFace
     {
-        public byte[] Proof { get; set; }
+        public string Proof { get; set; }
 
         public bool? AllowOffline { get; set; }
 

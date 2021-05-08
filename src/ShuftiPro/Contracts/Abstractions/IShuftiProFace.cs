@@ -3,12 +3,8 @@ using ShuftiPro.Converters;
 
 namespace ShuftiPro.Contracts.Abstractions
 {
-    interface IShuftiProFace
+    interface IShuftiProFace : IShuftiProProof
     {
-        [JsonConverter(typeof(ShuftiProByteArrayToBase64Converter))]
-        [JsonProperty("proof", NullValueHandling = NullValueHandling.Ignore)]
-        byte[] Proof { get; set; }
-
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_offline", NullValueHandling = NullValueHandling.Ignore)]
         bool? AllowOffline { get; set; }

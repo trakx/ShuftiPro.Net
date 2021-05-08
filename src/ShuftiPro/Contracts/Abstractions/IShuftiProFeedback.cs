@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using ShuftiPro.Services.Base;
 
 namespace ShuftiPro.Contracts.Abstractions
 {
@@ -8,10 +7,7 @@ namespace ShuftiPro.Contracts.Abstractions
         [JsonProperty("email")]
         string Email { get; set; }
 
-        [JsonProperty("error")]
-        ShuftiProFeedbackError Error { get; set; }
-
-        [JsonProperty("verification_url")]
+        [JsonProperty("verification_url", NullValueHandling = NullValueHandling.Ignore)]
         string VerificationUrl { get; set; }
     }
 }

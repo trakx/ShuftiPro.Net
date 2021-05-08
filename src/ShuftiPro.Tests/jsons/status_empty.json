@@ -4,7 +4,7 @@
   "country": null,
   "proofs": {
     "face": {
-      "proof": "https://shuftipro.com/api/storage/LRYwJmUctTQQorGWYAEDtw1rkTv8Jvx8QrwNYVHgbahnR9OemXyBph0NgnRvyAZJ/face/proof.png?access_token=c67499ccd4d7595e1679e1b2bcef1c0a4f36f5a0"
+      "proof": "*****"
     }
   },
   "verification_data": [],
@@ -25,7 +25,7 @@
       "ip": "91.213.101.2",
       "rdns": "91.213.101.2",
       "asn": "21317",
-      "isp": "Everymatrix SRL",
+      "isp": "*****",
       "country_name": "Romania",
       "country_code": "RO",
       "region_name": "",

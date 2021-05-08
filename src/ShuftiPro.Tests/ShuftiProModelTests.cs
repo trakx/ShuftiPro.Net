@@ -2,9 +2,8 @@
 using FluentAssertions;
 using Newtonsoft.Json;
 using NUnit.Framework;
+using ShuftiPro.Contracts;
 using ShuftiPro.Enums;
-using ShuftiPro.Services;
-using ShuftiPro.Services.Base;
 
 namespace ShuftiPro.Tests
 {

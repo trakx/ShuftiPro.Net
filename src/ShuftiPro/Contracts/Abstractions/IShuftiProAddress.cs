@@ -1,22 +1,18 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using ShuftiPro.Converters;
 
 namespace ShuftiPro.Contracts.Abstractions
 {
-    interface IShuftiProAddress : IShuftiProAddressBase
+    interface IShuftiProAddress : IShuftiProAddressBase, IShuftiProProof
     {
-        [JsonConverter(typeof(ShuftiProByteArrayToBase64Converter))]
-        [JsonProperty("proof", NullValueHandling = NullValueHandling.Ignore)]
-        byte[] Proof { get; set; }
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
+        ShuftiProName Name { get; set; }
 
-        [JsonConverter(typeof(ShuftiProDateTimeConverter))]
-        [JsonProperty("issue_date", NullValueHandling = NullValueHandling.Ignore)]
-        DateTime? IssueDate { get; set; }
-
+        [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("address_fuzzy_match", NullValueHandling = NullValueHandling.Ignore)]
         bool? AddressFuzzyMatch { get; set; }
 
+        [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("backside_proof_required", NullValueHandling = NullValueHandling.Ignore)]
         bool? BacksideProofRequired { get; set; }
 

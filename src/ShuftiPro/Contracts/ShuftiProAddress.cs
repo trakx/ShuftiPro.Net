@@ -14,7 +14,7 @@ namespace ShuftiPro.Contracts
 
         public string FullAddress { get; set; }
 
-        public byte[] Proof { get; set; }
+        public string Proof { get; set; }
 
         public DateTime? IssueDate { get; set; }
 

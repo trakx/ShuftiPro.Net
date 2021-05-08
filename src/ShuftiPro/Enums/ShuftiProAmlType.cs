@@ -51,5 +51,8 @@ namespace ShuftiPro.Enums
 
         [EnumMember(Value = "adverse-media-violent-crime")]
         AdverseMediaViolentCrime,
+
+        [EnumMember(Value = "fitness-probity")]
+        FitnessProbity,
     }
 }

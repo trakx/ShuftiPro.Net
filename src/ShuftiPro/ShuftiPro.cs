@@ -11,16 +11,15 @@ using Newtonsoft.Json;
 using ShuftiPro.Contracts;
 using ShuftiPro.Exceptions;
 using ShuftiPro.Options;
-using ShuftiPro.Services;
-using ShuftiPro.Services.Base;
 
 namespace ShuftiPro
 {
     public class ShuftiPro : IShuftiPro
     {
         private static readonly Uri BaseUri = new Uri("https://api.shuftipro.com");
-        private readonly ShuftiProCredentials credentials;
+        private readonly ShuftiProCredentials clientCredentials;
         private readonly HttpClient httpClient;
+
         public ShuftiPro()
         {
             httpClient = new HttpClient { BaseAddress = BaseUri };
@@ -31,28 +30,44 @@ namespace ShuftiPro
             httpClient = client;
             httpClient.BaseAddress = BaseUri;
         }
-        public ShuftiPro(ShuftiProCredentials credentials) : this()
+        public ShuftiPro(ShuftiProCredentials clientCredentials) : this()
         {
-            this.EnsureCredentialsIsValid(credentials);
-            this.credentials = credentials;
+            EnsureCredentialsIsValid(clientCredentials);
+            this.clientCredentials = clientCredentials;
         }
 
-        public ShuftiPro(HttpClient client, ShuftiProCredentials credentials) : this(client)
+        public ShuftiPro(HttpClient client, ShuftiProCredentials clientCredentials) : this(client)
         {
-            this.EnsureCredentialsIsValid(credentials);
-            this.credentials = credentials;
+            EnsureCredentialsIsValid(clientCredentials);
+            this.clientCredentials = clientCredentials;
         }
 
-        public async Task<ShuftiProFeedback> VerifyAsync(ShuftiProVerification verification, ShuftiProCredentials credentials)
+        public async Task<ShuftiProFeedback> VerifyAsync(ShuftiProVerification verification)
         {
             this.EnsureRequestIsValid(verification);
 
-            return await this.MakeCall<ShuftiProFeedback>(HttpMethod.Post, null, verification, credentials);
+            return await this.MakeCall<ShuftiProFeedback>(HttpMethod.Post, null, verification, this.clientCredentials);
         }
 
-        public ShuftiProStatus GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials credentials)
+        public async Task<ShuftiProFeedback> VerifyAsync(ShuftiProVerification verification, ShuftiProCredentials requestCredentials)
         {
-            throw new NotImplementedException();
+            this.EnsureRequestIsValid(verification);
+
+            return await this.MakeCall<ShuftiProFeedback>(HttpMethod.Post, null, verification, requestCredentials);
+        }
+
+        public async Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference)
+        {
+            this.EnsureRequestIsValid(reference);
+
+            return await this.MakeCall<ShuftiProStatus>(HttpMethod.Post, new Uri("/status", UriKind.Relative), reference, this.clientCredentials);
+        }
+
+        public async Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials requestCredentials)
+        {
+            this.EnsureRequestIsValid(reference);
+
+            return await this.MakeCall<ShuftiProStatus>(HttpMethod.Post, new Uri("/status", UriKind.Relative), reference, requestCredentials);
         }
 
         protected void EnsureRequestIsValid(object request)
@@ -81,10 +96,10 @@ namespace ShuftiPro
             return authorization;
         }
 
-        protected async Task<TResponse> MakeCall<TResponse>(HttpMethod method, Uri requestUri, object content, ShuftiProCredentials credentials = null)
+        protected async Task<TResponse> MakeCall<TResponse>(HttpMethod method, Uri requestUri, object content, ShuftiProCredentials credentials)
         {
             var httpRequest = new HttpRequestMessage(method, requestUri);
-            httpRequest.Headers.Authorization = this.GetAuthorizationHeader(credentials ?? this.credentials);
+            httpRequest.Headers.Authorization = this.GetAuthorizationHeader(credentials);
 
             var requestContent = JsonConvert.SerializeObject(content);
             httpRequest.Content = new StringContent(requestContent, Encoding.UTF8, "application/json");

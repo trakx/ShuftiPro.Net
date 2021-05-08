@@ -8,6 +8,10 @@ namespace ShuftiPro.Contracts
 
         public bool? BackgroundChecks { get; set; }
 
-        public ShuftiProFeedbackAddressResult Address { get; set; }
+        public ShuftiProAddressResult Address { get; set; }
+
+        public ShuftiProDocumentResult Document { get; set; }
+
+        public ShuftiProConsentResult Consent { get; set; }
     }
 }

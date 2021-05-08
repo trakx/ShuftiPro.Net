@@ -7,9 +7,9 @@ namespace ShuftiPro.Contracts
 {
     public class ShuftiProDocument : IShuftiProDocument
     {
-        public byte[] Proof { get; set; }
+        public string Proof { get; set; }
 
-        public byte[] AdditionalProof { get; set; }
+        public string AdditionalProof { get; set; }
 
         public ShuftiProName Name { get; set; }
 

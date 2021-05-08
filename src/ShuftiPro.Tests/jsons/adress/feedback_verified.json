@@ -1,0 +1,73 @@
+{
+  "reference": "18c13b42af1c422fa6ef2a8e7eba1133",
+  "event": "verification.accepted",
+  "email": null,
+  "country": null,
+  "verification_data": {
+    "address": {
+      "name": {
+        "first_name": "John",
+        "last_name": "Livone"
+      },
+      "full_address": "10 DOWNING ST, WESTMINSTER, LONDON SW1A 2AA, UK",
+      "selected_type": [
+        ""
+      ],
+      "supported_types": [
+        "id_card",
+        "bank_statement",
+        "driving_license",
+        "employer_letter",
+        "insurance_agreement",
+        "passport",
+        "rent_agreement",
+        "tax_bill",
+        "utility_bill"
+      ]
+    }
+  },
+  "verification_result": {
+    "address": {
+      "full_address": 1,
+      "name": 1,
+      "address_document_must_not_be_expired": 1,
+      "address_document_country": 1,
+      "selected_type": 1,
+      "address_document_visibility": 1,
+      "address_document": 1,
+      "address_document_proof": null
+    }
+  },
+  "info": {
+    "agent": {
+      "is_desktop": true,
+      "is_phone": false,
+      "useragent": "Unrecognized",
+      "device_name": "0",
+      "browser_name": "",
+      "platform_name": ""
+    },
+    "geolocation": {
+      "host": "194-114-148-67.datagroup.ua",
+      "ip": "195.114.148.67",
+      "rdns": "195.114.148.67",
+      "asn": "3326",
+      "isp": "Private Joint Stock Company Datagroup",
+      "country_name": "Ukraine",
+      "country_code": "UA",
+      "region_name": "Kyiv City",
+      "region_code": "30",
+      "city": "Kyiv",
+      "postal_code": "09410",
+      "continent_name": "Europe",
+      "continent_code": "EU",
+      "latitude": "50.367900848389",
+      "longitude": "30.653200149536",
+      "metro_code": "",
+      "timezone": "Europe/Kiev",
+      "ip_type": "ipv4",
+      "capital": "Kyiv",
+      "currency": "UAH"
+    }
+  }
+}

@@ -2,32 +2,23 @@
 using System.Threading.Tasks;
 using FluentAssertions;
 using NUnit.Framework;
-using ShuftiPro.Services;
-using ShuftiPro.Services.Face;
+using ShuftiPro.Contracts;
 
 namespace ShuftiPro.Tests
 {
-    public class ShuftiProFaceServiceTests : ShuftiProServiceTestBase
+    public class ShuftiProFaceServiceTests : ShuftiProTestBase
     {
-        private IShuftiProFaceService faceService;
-
-        public override void Setup()
-        {
-            base.Setup();
-            this.faceService = new ShuftiProClient(Credentials).FaceService;
-        }
-
         [Test]
         public async Task VerifyOnSite_ValidVerification_ReturnsFeedback()
         {
-            var verification = new ShuftiProOnSiteFaceVerification
+            var verification = new ShuftiProVerification
             {
                 CallbackUrl = CallbackUrl,
                 Reference = Guid.NewGuid().ToString("N"),
-                Face = new ShuftiProOnSiteFace()
+                Face = new ShuftiProFace()
             };
 
-            var feedback = await this.faceService.VerifyOnSiteAsync(verification);
+            var feedback = await this.ShuftiPro.VerifyAsync(verification);
             feedback.Should().NotBeNull();
             feedback.VerificationUrl.Should().NotBeEmpty();
             feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);

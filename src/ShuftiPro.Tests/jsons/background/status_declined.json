@@ -1,0 +1,1240 @@
+{
+  "reference": "7ac59215cf3547ad93115302e7bb2173",
+  "event": "verification.declined",
+  "country": null,
+  "proofs": {},
+  "verification_data": {
+    "background_checks": {
+      "dob": "1985-09-08",
+      "name": {
+        "first_name": "Maria",
+        "last_name": "Michaela"
+      },
+      "aml_data": {
+        "filters": [
+          "sanction",
+          "warning",
+          "fitness-probity",
+          "pep",
+          "pep-class-1",
+          "pep-class-2",
+          "pep-class-3",
+          "pep-class-4"
+        ],
+        "hits": [
+          {
+            "name": "Michaela daughters Cara, Mariah",
+            "entity_type": "person",
+            "score": 51.6026,
+            "match_types": [
+              "name_fuzzy"
+            ],
+            "alternative_names": [
+              "Michaela daughters Cara, Mariah",
+              "Maria Michael"
+            ],
+            "assets": [],
+            "associates": [
+              {
+                "association": "relative",
+                "name": "Kerry Kennedy"
+              }
+            ],
+            "fields": {
+              "Country": [
+                {
+                  "value": "Namibia",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Original Country Text": [
+                {
+                  "value": "Namibia",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Countries": [
+                {
+                  "value": "Namibia",
+                  "source": "",
+                  "tag": "country_names"
+                }
+              ],
+              "Political Position": [
+                {
+                  "value": "Child of Kerry Kennedy",
+                  "source": "complyadvantage",
+                  "tag": "political_position"
+                }
+              ]
+            },
+            "media": [
+              {
+                "snippet": "Inspektor Linekela Shikongo, Polizeisprecherin in der Omusati-Region, berichtete, dass sich der Unfall um etwa 20.30 Uhr im Dorf Oshikuyu ereignet habe. Die als Maria Michael identifizierte Frau versuchte die Straße zu überqueren, als sie angeblich von einem 43-jährigen Fahrer erfasst wurde. \"Der Fahrer hat den Unfall schadlos überlebt\", sagte Shikongo.",
+                "title": "Verkehrsunfälle fordern erneut zahlreiche Opfer - Polizei & Gericht - Allgemeine Zeitung",
+                "url": "https://www.az.com.na/nachrichten/verkehrsunflle-fordern-erneut-zahlreiche-opfer2020-01-03"
+              }
+            ],
+            "source_notes": {
+              "complyadvantage": {
+                "aml_types": [
+                  "pep-class-2",
+                  "pep-class-4",
+                  "pep"
+                ],
+                "name": "ComplyAdvantage PEP Data"
+              },
+              "complyadvantage-adverse-media": {
+                "aml_types": [
+                  "adverse-media-general",
+                  "adverse-media"
+                ],
+                "country_codes": [
+                  "NA"
+                ],
+                "name": "ComplyAdvantage Adverse Media"
+              }
+            },
+            "sources": [
+              "complyadvantage-adverse-media",
+              "complyadvantage"
+            ],
+            "types": [
+              "pep-class-4",
+              "adverse-media",
+              "adverse-media-general",
+              "pep-class-2",
+              "pep"
+            ]
+          },
+          {
+            "name": "Michaela Maria Harrieder",
+            "entity_type": "person",
+            "score": 50.602634,
+            "match_types": [
+              "name_exact"
+            ],
+            "alternative_names": [
+              "Michaela Maria Harrieder"
+            ],
+            "assets": [],
+            "associates": [
+              {
+                "association": "spouse",
+                "name": "STEFAN GEORG HARRIEDER"
+              }
+            ],
+            "fields": {
+              "Original Country Text": [
+                {
+                  "value": "International",
+                  "source": "united-states-foreign-diplomatic-missions",
+                  "tag": ""
+                },
+                {
+                  "value": "United States",
+                  "source": "united-states-foreign-diplomatic-missions",
+                  "tag": ""
+                }
+              ],
+              "Country": [
+                {
+                  "value": "United States",
+                  "source": "united-states-foreign-diplomatic-missions",
+                  "tag": ""
+                }
+              ],
+              "Countries": [
+                {
+                  "value": "United States",
+                  "source": "",
+                  "tag": "country_names"
+                }
+              ],
+              "Political Position": [
+                {
+                  "value": "Member of a Diplomatic Mission",
+                  "source": "united-states-foreign-diplomatic-missions",
+                  "tag": "political_position"
+                }
+              ],
+              "Chamber": [
+                {
+                  "value": "Diplomatic Mission",
+                  "source": "united-states-foreign-diplomatic-missions",
+                  "tag": ""
+                }
+              ],
+              "Locationurl": [
+                {
+                  "value": "https://www.state.gov/wp-content/uploads/2020/10/Fall-2020-Diplomatic-List1.pdf",
+                  "source": "united-states-foreign-diplomatic-missions",
+                  "tag": ""
+                }
+              ],
+              "Other Info": [
+                {
+                  "value": "COUNSELOR",
+                  "source": "united-states-foreign-diplomatic-missions",
+                  "tag": ""
+                }
+              ]
+            },
+            "media": [],
+            "source_notes": {
+              "united-states-foreign-diplomatic-missions": {
+                "aml_types": [
+                  "pep-class-2"
+                ],
+                "country_codes": [
+                  "US"
+                ],
+                "name": "United States Foreign Diplomatic Missions",
+                "url": "https://www.state.gov/resources-for-foreign-embassies/"
+              }
+            },
+            "sources": [
+              "united-states-foreign-diplomatic-missions"
+            ],
+            "types": [
+              "pep-class-2",
+              "pep"
+            ]
+          },
+          {
+            "name": "Marina of Greece and Denmark Michael",
+            "entity_type": "person",
+            "score": 32.810276,
+            "match_types": [
+              "name_fuzzy"
+            ],
+            "alternative_names": [
+              "Marina of Greece and Denmark Michael"
+            ],
+            "assets": [],
+            "associates": [
+              {
+                "association": "child",
+                "name": "Michael George Charles Franklin"
+              }
+            ],
+            "fields": {
+              "Political Position": [
+                {
+                  "value": "Parent of Michael George Charles Franklin",
+                  "source": "complyadvantage",
+                  "tag": "political_position"
+                }
+              ],
+              "Related URL": [
+                {
+                  "value": "http://complyadvantage.com",
+                  "source": "complyadvantage",
+                  "tag": "related_url"
+                }
+              ]
+            },
+            "media": [],
+            "source_notes": {
+              "complyadvantage": {
+                "aml_types": [
+                  "pep-class-2",
+                  "pep"
+                ],
+                "name": "ComplyAdvantage PEP Data"
+              }
+            },
+            "sources": [
+              "complyadvantage"
+            ],
+            "types": [
+              "pep-class-2",
+              "pep"
+            ]
+          },
+          {
+            "name": "Dimitri Pavlovich \\n* Paula Maria Pavlovna\\n* Anna Pavlovna\\n* Michael Pavlovich Ilyinsky",
+            "entity_type": "person",
+            "score": 31.873028,
+            "match_types": [
+              "name_fuzzy"
+            ],
+            "alternative_names": [
+              "Dimitri Pavlovich",
+              "N. Anna Maria",
+              "Dimitri Pavlovich \\n* Paula Maria Pavlovna\\n* Anna Pavlovna\\n* Michael Pavlovich Ilyinsky",
+              "Dimitri Pavlovich \\n* Paula Maria Pavlovna\\n* Anna Pavlovna\\n* Michael Pavlovich"
+            ],
+            "assets": [],
+            "associates": [
+              {
+                "association": "relative",
+                "name": "Paul Dimitrievitch Romanovsky-Ilynsky"
+              }
+            ],
+            "fields": {
+              "Original Country Text": [
+                {
+                  "value": ", Politician, Military Officer",
+                  "source": "complyadvantage",
+                  "tag": ""
+                },
+                {
+                  "value": "Costa Rica",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                },
+                {
+                  "value": "Germany",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Country": [
+                {
+                  "value": "Costa Rica",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                },
+                {
+                  "value": "Germany",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Countries": [
+                {
+                  "value": "Costa Rica, Germany",
+                  "source": "",
+                  "tag": "country_names"
+                }
+              ],
+              "Political Position": [
+                {
+                  "value": "Child of Paul Dimitrievitch Romanovsky-Ilynsky (Politician, Military Officer)",
+                  "source": "complyadvantage",
+                  "tag": "political_position"
+                }
+              ],
+              "Related URL": [
+                {
+                  "value": "http://complyadvantage.com",
+                  "source": "complyadvantage",
+                  "tag": "related_url"
+                }
+              ]
+            },
+            "media": [
+              {
+                "date": "2012-11-15T00:00:00Z",
+                "snippet": "Eine Polizeipatrouille war in der Gegend unterwegs und entdeckte sie splitterfasernackt in Aktion. Die frisch ertappte Anna Maria N. hatte offenbar so gar keine Lust, die Nacht auf der Wache zu verbringen und fing laut Gericht an, die Beamten mit ihrer Handtasche zu bearbeiten. Ihr Partner blieb offenbar friedlich.",
+                "title": "Italien: Sex auf Straßen von Lecce ist strafbar auch während Fußball-WM - DER SPIEGEL",
+                "url": "https://www.spiegel.de/panorama/gesellschaft/italien-sex-auf-strassen-von-lecce-ist-strafbar-auch-waehrend-fussball-wm-a-867458.html"
+              },
+              {
+                "date": "2011-08-21T00:00:00Z",
+                "snippet": "Capel terminó casándose con la hija del barón de Ribblesdale y mantuvo a Coco como amante, hasta que el pobre se mató en un accidente vial. Ella pronto conoció al duque Dimitri, un noble moscovita venido a menos que huyó de la policía rusa por participar en el asesinato de Rasputín. De nuevo fracasó porque este se hizo el ruso y se casó con la millonaria norteamericana Audrey Emery.",
+                "title": "Página Negra: Coco Chanel, emperatriz de la moda, elegante y fabulosa - La Nación",
+                "url": "https://www.nacion.com/archivo/pagina-negra-coco-chanel-emperatriz-de-la-moda-elegante-y-fabulosa/N6G2Z45FEJBXZPFEHCO6TQU7LY/story/"
+              }
+            ],
+            "source_notes": {
+              "complyadvantage": {
+                "aml_types": [
+                  "pep-class-4",
+                  "pep",
+                  "pep-class-2"
+                ],
+                "name": "ComplyAdvantage PEP Data"
+              },
+              "complyadvantage-adverse-media": {
+                "aml_types": [
+                  "adverse-media",
+                  "adverse-media-general",
+                  "adverse-media-violent-crime"
+                ],
+                "country_codes": [
+                  "DE",
+                  "CR"
+                ],
+                "name": "ComplyAdvantage Adverse Media"
+              }
+            },
+            "sources": [
+              "complyadvantage-adverse-media",
+              "complyadvantage"
+            ],
+            "types": [
+              "pep-class-2",
+              "adverse-media",
+              "adverse-media-general",
+              "pep",
+              "pep-class-4",
+              "adverse-media-violent-crime"
+            ]
+          },
+          {
+            "name": "Michael Bly",
+            "entity_type": "person",
+            "score": 31.810307,
+            "match_types": [
+              "aka_fuzzy"
+            ],
+            "alternative_names": [
+              "Michael Bly Santa-Maria",
+              "Michael Bly"
+            ],
+            "assets": [],
+            "associates": [],
+            "fields": {
+              "Country": [
+                {
+                  "value": "United States",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                },
+                {
+                  "value": "United States",
+                  "source": "complyadvantage",
+                  "tag": ""
+                }
+              ],
+              "Original Country Text": [
+                {
+                  "value": "United States",
+                  "source": "complyadvantage",
+                  "tag": ""
+                }
+              ],
+              "Countries": [
+                {
+                  "value": "United States",
+                  "source": "",
+                  "tag": "country_names"
+                }
+              ],
+              "Political Position": [
+                {
+                  "value": "Director of a State Owned Entity",
+                  "source": "complyadvantage",
+                  "tag": "political_position"
+                }
+              ],
+              "Chamber": [
+                {
+                  "value": "FCA North America Board of Directors",
+                  "source": "complyadvantage",
+                  "tag": ""
+                }
+              ],
+              "Company": [
+                {
+                  "value": "FCA North America",
+                  "source": "complyadvantage",
+                  "tag": ""
+                }
+              ],
+              "Other Info": [
+                {
+                  "value": "Head of Powertrain Engine Engineering",
+                  "source": "complyadvantage",
+                  "tag": ""
+                }
+              ],
+              "Parent Company": [
+                {
+                  "value": "FCA",
+                  "source": "complyadvantage",
+                  "tag": ""
+                }
+              ],
+              "Related URL": [
+                {
+                  "value": "www.fcanorthamerica.com",
+                  "source": "complyadvantage",
+                  "tag": "related_url"
+                }
+              ],
+              "Related Url": [
+                {
+                  "value": "http://www.theofficialboard.com/org-chart/fca-north-america",
+                  "source": "complyadvantage",
+                  "tag": "related_url"
+                }
+              ]
+            },
+            "media": [
+              {
+                "date": "2013-11-12T00:00:00Z",
+                "snippet": "Defense attorney Michael Bly Santa-Maria told the Orchard Park judge that Jankowiak works full time and has stopped drinking since his most recent arrest. Outside the courtroom, Santa-Maria said that in his 15 years of legal practice, he has never had a misdemeanor DWI case in which a judge ordered the defendant to wear an alcohol monitor. He said that such an order is more common in felony DWI cases.",
+                "title": "Corasanti juror ordered to wear monitoring device in latest DWI case - City & Region - The Buffalo News",
+                "url": "http://www.buffnews.com/apps/pbcs.dll/article?Ref=AR&avis=BN&category=CITYANDREGION&date=20131112&lopenr=131119626&profile=1025&template=printart"
+              }
+            ],
+            "source_notes": {
+              "complyadvantage": {
+                "aml_types": [
+                  "pep-class-3"
+                ],
+                "country_codes": [
+                  "US"
+                ],
+                "name": "ComplyAdvantage PEP Data"
+              },
+              "complyadvantage-adverse-media": {
+                "aml_types": [
+                  "adverse-media",
+                  "adverse-media-general"
+                ],
+                "country_codes": [
+                  "US"
+                ],
+                "name": "ComplyAdvantage Adverse Media"
+              }
+            },
+            "sources": [
+              "complyadvantage-adverse-media",
+              "complyadvantage"
+            ],
+            "types": [
+              "adverse-media",
+              "adverse-media-general",
+              "pep-class-3",
+              "pep"
+            ]
+          },
+          {
+            "name": "Michael Lockwood",
+            "entity_type": "person",
+            "score": 23.57467,
+            "match_types": [
+              "aka_fuzzy",
+              "year_of_birth"
+            ],
+            "alternative_names": [
+              "Lisa Marie Lockwood",
+              "Michael Lockwood",
+              "Michael Lockwood Lisa Marie Presley"
+            ],
+            "assets": [],
+            "associates": [],
+            "fields": {
+              "Country": [
+                {
+                  "value": "United Kingdom",
+                  "source": "united-kingdom-independent-office-for-police-conduct-leadership",
+                  "tag": ""
+                },
+                {
+                  "value": "United States",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Original Country Text": [
+                {
+                  "value": "United Kingdom",
+                  "source": "united-kingdom-independent-office-for-police-conduct-leadership",
+                  "tag": ""
+                },
+                {
+                  "value": "United States",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Countries": [
+                {
+                  "value": "United Kingdom, United States",
+                  "source": "",
+                  "tag": "country_names"
+                }
+              ],
+              "Date of Birth": [
+                {
+                  "value": "1985",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": "date_of_birth"
+                }
+              ],
+              "Political Position": [
+                {
+                  "value": "Senior Government Official",
+                  "source": "united-kingdom-independent-office-for-police-conduct-leadership",
+                  "tag": "political_position"
+                }
+              ],
+              "Activation Date": [
+                {
+                  "value": "July 11, 2007",
+                  "source": "canadian-securities-commission",
+                  "tag": ""
+                }
+              ],
+              "Chamber": [
+                {
+                  "value": "Independent Office for Police Conduct",
+                  "source": "united-kingdom-independent-office-for-police-conduct-leadership",
+                  "tag": ""
+                }
+              ],
+              "Enforcement Agency": [
+                {
+                  "value": "Canadian Securities Administrator",
+                  "source": "canadian-securities-commission",
+                  "tag": ""
+                }
+              ],
+              "Function": [
+                {
+                  "value": "Director General",
+                  "source": "united-kingdom-independent-office-for-police-conduct-leadership",
+                  "tag": ""
+                }
+              ],
+              "Institution Type": [
+                {
+                  "value": "Agency under Ministry",
+                  "source": "united-kingdom-independent-office-for-police-conduct-leadership",
+                  "tag": ""
+                }
+              ],
+              "Locationurl": [
+                {
+                  "value": "https://policeconduct.gov.uk/who-we-are/our-people",
+                  "source": "united-kingdom-independent-office-for-police-conduct-leadership",
+                  "tag": ""
+                },
+                {
+                  "value": "https://www.securities-administrators.ca/disciplinedpersons.aspx?id=74",
+                  "source": "canadian-securities-commission",
+                  "tag": ""
+                }
+              ]
+            },
+            "media": [
+              {
+                "date": "2017-02-22T00:00:00Z",
+                "snippet": "In court papers filed last week she said the couple 's daughters were taken into the care of the department of children and family services in Los Angeles. Lockwood has denied any wrongdoing and branded Presley 's claims \"highly sensational, inaccurate and unproven \". It is Presley 's fourth divorce after she was previously married to the late pop star Michael Jackson, actor Nicolas Cage and musician Danny Keough.",
+                "title": "Lisa Marie Presley accused of hiding a $75m fortune at divorce hearing with Michael Lockwood - Daily Record",
+                "url": "https://www.dailyrecord.co.uk/entertainment/celebrity/lisa-marie-presley-accused-hiding-9899401.amp"
+              },
+              {
+                "date": "2019-11-01T00:00:00Z",
+                "snippet": "She tried to get away and Ballesteroz grabbed her legs and dragged her toward the car, causing her head to hit the ground, according to charging documents.      DUI   Lisa Marie Lockwood, 34, of Fairbanks, was charged with driving under the influence, driving with a restricted license and having an open container Oct. 18 after Alaska State Troopers stopped her for driving with a blown front left tire. Lockwood smelled strongly of alcohol, admitted to drinking vodka and told troopers she was \"too drunk to drive,†according to charging documents.",
+                "title": "Public Safety Report: Nov. 1, 2019 | Public Safety Report | newsminer.com",
+                "url": "http://www.newsminer.com/news/public_safety_report/public-safety-report-nov/article_313f74ac-fc7c-11e9-8fc6-effcb252b136.html"
+              }
+            ],
+            "source_notes": {
+              "canadian-securities-commission": {
+                "aml_types": [
+                  "warning"
+                ],
+                "listing_started_utc": "2020-03-19T00:00:00Z",
+                "name": "Canadian Securities Administrators Disciplined List",
+                "url": "http://www.securities-administrators.ca/disciplinedpersons.aspx?id=74"
+              },
+              "complyadvantage-adverse-media": {
+                "aml_types": [
+                  "adverse-media-general",
+                  "adverse-media"
+                ],
+                "country_codes": [
+                  "US"
+                ],
+                "name": "ComplyAdvantage Adverse Media"
+              },
+              "united-kingdom-independent-office-for-police-conduct-leadership": {
+                "aml_types": [
+                  "pep-class-1"
+                ],
+                "country_codes": [
+                  "GB"
+                ],
+                "name": "United Kingdom Independent Office for Police Conduct Leadership",
+                "url": "https://policeconduct.gov.uk/who-we-are/our-people"
+              }
+            },
+            "sources": [
+              "canadian-securities-commission",
+              "complyadvantage-adverse-media",
+              "united-kingdom-independent-office-for-police-conduct-leadership"
+            ],
+            "types": [
+              "adverse-media-general",
+              "pep",
+              "pep-class-1",
+              "adverse-media",
+              "warning"
+            ]
+          },
+          {
+            "name": "Mario Michael Bilotti",
+            "entity_type": "person",
+            "score": 21.531118,
+            "match_types": [
+              "name_fuzzy"
+            ],
+            "alternative_names": [
+              "Mario Michael Bilotti"
+            ],
+            "assets": [],
+            "associates": [],
+            "fields": {
+              "Crd": [
+                {
+                  "value": "2834416",
+                  "source": "us-individuals-barred-by-finra",
+                  "tag": ""
+                }
+              ],
+              "Finra Bar": [
+                {
+                  "value": "prohibited from engaging in securities or investment banking activity",
+                  "source": "us-individuals-barred-by-finra",
+                  "tag": ""
+                }
+              ],
+              "Related Url": [
+                {
+                  "value": "http://brokercheck.finra.org/Individual/Summary/2834416",
+                  "source": "us-individuals-barred-by-finra",
+                  "tag": "related_url"
+                }
+              ]
+            },
+            "media": [],
+            "source_notes": {
+              "us-individuals-barred-by-finra": {
+                "aml_types": [
+                  "warning"
+                ],
+                "name": "United States Individuals Barred by FINRA",
+                "url": "https://www.finra.org/rules-guidance/oversight-Oversight%20%26%20Enforcement/individuals-barred-finra"
+              }
+            },
+            "sources": [
+              "us-individuals-barred-by-finra"
+            ],
+            "types": [
+              "warning"
+            ]
+          },
+          {
+            "name": "Michael Marion",
+            "entity_type": "person",
+            "score": 21.48633,
+            "match_types": [
+              "aka_fuzzy",
+              "year_of_birth"
+            ],
+            "alternative_names": [
+              "Michael Marione",
+              "Michael Mario",
+              "Michael Marion"
+            ],
+            "assets": [],
+            "associates": [],
+            "fields": {
+              "Country": [
+                {
+                  "value": "United States",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Original Country Text": [
+                {
+                  "value": "United States",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Countries": [
+                {
+                  "value": "United States",
+                  "source": "",
+                  "tag": "country_names"
+                }
+              ],
+              "Date of Birth": [
+                {
+                  "value": "1985",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": "date_of_birth"
+                }
+              ],
+              "Address": [
+                {
+                  "value": "Florissant, MO",
+                  "source": "united-states-missouri-department-of-insurance-enforcement-actions",
+                  "tag": ""
+                }
+              ],
+              "Case Number": [
+                {
+                  "value": "169706E",
+                  "source": "united-states-missouri-department-of-insurance-enforcement-actions",
+                  "tag": ""
+                }
+              ],
+              "Enforcement Agency": [
+                {
+                  "value": "Missouri Department of Insurance",
+                  "source": "united-states-missouri-department-of-insurance-enforcement-actions",
+                  "tag": ""
+                }
+              ],
+              "Enforcement Type": [
+                {
+                  "value": "Forfeiture (fine)",
+                  "source": "united-states-missouri-department-of-insurance-enforcement-actions",
+                  "tag": ""
+                }
+              ],
+              "Related URL": [
+                {
+                  "value": "https://insurance.mo.gov/CompanyAgentSearch/search/searchResults2.php?ID=1918",
+                  "source": "united-states-missouri-department-of-insurance-enforcement-actions",
+                  "tag": "related_url"
+                }
+              ]
+            },
+            "media": [
+              {
+                "date": "2012-05-30T00:00:00Z",
+                "snippet": "Michael Marione, age 27, of Rahway was arrested in Cranford on May 25 and charged with burglary, theft and criminal mischief after he was captured exiting a Pershing Avenue residence. Marione was also charged with possession of a hypodermic syringe. A neighbor allegedly witnessed Marione on the property wearing gloves and carrying a backpack.",
+                "title": "Burglar caught in Cranford as he was leaving Pershing Avenue home | \t\t\t\t\t\tNJ.com",
+                "url": "http://www.nj.com/cranford/index.ssf/2012/05/burglar_caught_in_cranford_as.html"
+              },
+              {
+                "snippet": "Wesley Garland Lawrence, Johnson Road, Atwood, guilty, domestic assault-second offense, $350 fine, 30 days jail, supervised probation for 10 months 29 days; dismissed charge of interfering with emergency call. Michael Marion, Forrest Avenue, McKenzie, guilty, domestic assault, supervised probation, no contact with victim, complete anger management. ; dismissed, violation of order of protection.",
+                "title": "Carroll County General Sessions | The Mckenzie Banner",
+                "url": "https://www.mckenziebanner.com/stories/carroll-county-general-sessions,6929"
+              },
+              {
+                "snippet": "THE HISTORY OF THIS LAWSUIT On January 5, 1978 the plaintiff filed suit based on diversity of citizenship against *524 members of the Funding Group and related entities Daniel and Dora Dodge Moran, Thomas P. McGlon, Phillip J. Fleming, James W. Feeney, Natural Resources, S.A., Intercontinental Investments, Inc., Darnley Investments, Ltd., Hartford Construction Company, Ltd., Michael Marion, Jean Feeney, Lionel Leeds, and Oaks-Darby, Ltd., alleging common law fraud and breach of contract. In July 1978, plaintiff's motion for leave to amend the complaint to add federal and state securities claims and to add C&L(I), C&L(U.S.), C&L(Bahamas), and other Funding Group members Theresa McGlon, and Augustin J. San Fillipo as defendants was granted.",
+                "title": "Cocklereece v. Moran, 532 F. Supp. 519 (N.D. Ga. 1982) :: Justia",
+                "url": "https://law.justia.com/cases/federal/district-courts/FSupp/532/519/2145555/"
+              },
+              {
+                "date": "2017-07-27T00:00:00Z",
+                "snippet": "Benning wasn't hit, though he broke three ribs and was struck in the face with brass knuckles during the scuffle. The Minot Daily News reports that Marion appeared in court Monday and pleaded not guilty to attempted murder along with drug, escape, weapons and fleeing charges. The charges carry a total maximum sentence of 57 years in jail.",
+                "title": "Dunseith man pleads not guilty to trying to kill deputy - News - Devils Lake Journal - Devils Lake, ND - Devils Lake, ND",
+                "url": "http://www.devilslakejournal.com/news/20170727/dunseith-man-pleads-not-guilty-to-trying-to-kill-deputy?rssfeed=true"
+              },
+              {
+                "date": "2015-07-24T00:00:00Z",
+                "pdf_url": "http://complyadvantage-asset.s3.amazonaws.com/7fde1da0-688b-4c1a-97b8-5f303585d2a3.pdf",
+                "snippet": "The Van Bavels, who bought their house last year, and Marion, whose house has been in his family since 1965, both supported that option as well. Mark Van Bavel, a criminal defense attorney, and Marion, a television news producer, tried to find some humor in their bleak situations. \"I'm going to start packing my bags,\" Marion announced.",
+                "title": "Fatalistic Overbrook residents resigned to losing houses to combat flooding - Baltimore Sun",
+                "url": "http://www.baltimoresun.com/news/maryland/baltimore-county/towson/ph-tt-overbrook-flooding-options-0729-20150724-story.html"
+              },
+              {
+                "date": "2019-01-08T00:00:00Z",
+                "snippet": "Outside the Miami-Dade County Courthouse, advocates for ex-cons celebrated the historic milestone Tuesday, while also protesting the lack of prison reform. Michael Marion told Local 10 News he spent four years in prison for cocaine possession. On Tuesday, he waited an hour and a half so he could be the first ex-con to register to vote in Fort Lauderdale.",
+                "title": "Former felons can begin registering to vote in Florida",
+                "url": "https://www.local10.com/news/2019/01/08/former-felons-can-begin-registering-to-vote-in-florida/?outputType=amp"
+              },
+              {
+                "snippet": "You have free articles remaining. Authorities say Marion resisted arrest after a vehicle pursuit in February 2017. They say Marion reached for Deputy Keith Benning's gun and tried to point it toward the officer, saying \"he could not go back to jail.\"",
+                "title": "Man accused of assaulting North Dakota deputy sentenced to 6-plus years | State & Regional | billingsgazette.com",
+                "url": "https://billingsgazette.com/news/state-and-regional/man-accused-of-assaulting-north-dakota-deputy-sentenced-to-/article_6c88e3ad-f41c-5b2a-b74e-922655902d8f.html"
+              },
+              {
+                "date": "2018-05-02T00:00:00Z",
+                "snippet": "A judge says a North Dakota man originally charged with attempted murder for an assault on a county deputy must serve more than six years in prison. The Minot Daily News reports that 33-year-old Michael Marion, of Dunseith, pleaded guilty Monday to numerous felony charges, including aggravated assault, attempting to disarm an officer, and possession with intent to deliver methamphetamine. Authorities say Marion resisted arrest after a vehicle pursuit in February 2017.",
+                "title": "Man accused of assaulting deputy sentenced to 6-plus years | The Seattle Times",
+                "url": "https://www.seattletimes.com/nation-world/man-accused-of-assaulting-deputy-sentenced-to-6-plus-years/"
+              },
+              {
+                "snippet": "- Officer Justin Brister charged with Michael Marion, 23, Forrest Avenue, McKenzie, with Domestic Assault. The report indicates dispatch received a 911 call of an assault on Forrest Avenue on June 13.",
+                "title": "McKenzie Police Reports | The Mckenzie Banner",
+                "url": "https://www.mckenziebanner.com/stories/mckenzie-police-reports,6111"
+              },
+              {
+                "date": "2017-07-27T00:00:00Z",
+                "snippet": "The Minot Daily News reports (http //bit.ly/2vMcAIg ) that Marion appeared in court Monday and pleaded not guilty to attempted murder along with drug, escape, weapons and fleeing charges. The charges carry a total maximum sentence of 57 years in jail.",
+                "title": "North Dakota man pleads not guilty to trying to kill deputy - News - Crookston Times - Crookston, MN - Crookston, MN",
+                "url": "http://www.crookstontimes.com/news/20170727/north-dakota-man-pleads-not-guilty-to-trying-to-kill-deputy?rssfeed=true"
+              },
+              {
+                "snippet": "MIAMI.- Un hombre de Hialeah fue sentenciado a 12 años de cárcel por abandonar el lugar de un accidente de tráfico, en el que ocasionó la muerte a una persona. Michael Mario delgado, de 25 años, fue declarado culpable de homicidio involuntario de tráfico y abandono del lugar, donde dejó a su suerte al hombre atropellado. El incidente ocurrió en Hialeah, el 26 de enero de 2017, sobre las 9",
+                "title": "Pena de 12 años de prisión para joven de Hialeah por muerte y abandono del lugar de accidente | Judiciales, Hialeah",
+                "url": "https://www.diariolasamericas.com/pena-12-anos-prision-joven-hialeah-muerte-y-abandono-del-lugar-accidente-n4175732/amp"
+              },
+              {
+                "date": "2018-11-01T00:00:00Z",
+                "snippet": "The Miami County Sheriff 's Office has promoted several employees from within the department. Deputy Lieutenant Michael Marion has been promoted to deputy captain and will serve as the jail administrator. Marion is a 17-year veteran of the Miami County Sheriff 's Office.",
+                "title": "Sheriff's office promotes from within - Troy Daily News",
+                "url": "https://www.tdn-net.com/news/51516/sheriffs-office-promotes-from-within"
+              }
+            ],
+            "source_notes": {
+              "complyadvantage-adverse-media": {
+                "aml_types": [
+                  "adverse-media",
+                  "adverse-media-violent-crime",
+                  "adverse-media-fraud",
+                  "adverse-media-general",
+                  "adverse-media-narcotics"
+                ],
+                "country_codes": [
+                  "US"
+                ],
+                "name": "ComplyAdvantage Adverse Media"
+              },
+              "united-states-missouri-department-of-insurance-enforcement-actions": {
+                "aml_types": [
+                  "warning"
+                ],
+                "listing_started_utc": "2019-10-23T00:00:00Z",
+                "name": "United States Missouri Department of Insurance Enforcement Actions",
+                "url": "https://insurance.mo.gov/CompanyAgentSearch/search/SearchEnforcementActions.php?formPost=1&license_number=&company_name=&last_name=&first_name=&case_num=&city=&zip_code=&Submit=Submit"
+              }
+            },
+            "sources": [
+              "complyadvantage-adverse-media",
+              "united-states-missouri-department-of-insurance-enforcement-actions"
+            ],
+            "types": [
+              "adverse-media",
+              "adverse-media-violent-crime",
+              "adverse-media-financial-crime",
+              "warning",
+              "adverse-media-fraud",
+              "adverse-media-general",
+              "adverse-media-narcotics"
+            ]
+          },
+          {
+            "name": "Michael James O'Mara",
+            "entity_type": "person",
+            "score": 21.48633,
+            "match_types": [
+              "name_fuzzy"
+            ],
+            "alternative_names": [
+              "Michael James O'Mara",
+              "James O'Mara"
+            ],
+            "assets": [],
+            "associates": [],
+            "fields": {
+              "Country": [
+                {
+                  "value": "Republic of Ireland",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Original Country Text": [
+                {
+                  "value": "Ireland",
+                  "source": "complyadvantage-adverse-media",
+                  "tag": ""
+                }
+              ],
+              "Countries": [
+                {
+                  "value": "Republic of Ireland",
+                  "source": "",
+                  "tag": "country_names"
+                }
+              ],
+              "Activation Date": [
+                {
+                  "value": "March 29, 2018",
+                  "source": "canadian-securities-commission",
+                  "tag": ""
+                },
+                {
+                  "value": "March 29, 2018",
+                  "source": "canadian-security-administrators",
+                  "tag": ""
+                }
+              ],
+              "Enforcement Agency": [
+                {
+                  "value": "Canadian Securities Administrator",
+                  "source": "canadian-securities-commission",
+                  "tag": ""
+                },
+                {
+                  "value": "Canadian Securities Administrators",
+                  "source": "canadian-security-administrators",
+                  "tag": ""
+                }
+              ],
+              "Enforcement Type": [
+                {
+                  "value": "Registration ban (with or without exceptions) and/or restrictions",
+                  "source": "canadian-security-administrators",
+                  "tag": ""
+                }
+              ],
+              "Locationurl": [
+                {
+                  "value": "https://www.securities-administrators.ca/disciplinedpersons.aspx?id=74",
+                  "source": "canadian-securities-commission",
+                  "tag": ""
+                }
+              ],
+              "offence": [
+                {
+                  "value": "Fraud and/or Forgery and/or Falsification Internal control violations Making false or misleading statements",
+                  "source": "canadian-security-administrators",
+                  "tag": ""
+                }
+              ],
+              "Related URL": [
+                {
+                  "value": "http://mfda.ca/case-order/order2017104/",
+                  "source": "canadian-security-administrators",
+                  "tag": "related_url"
+                }
+              ]
+            },
+            "media": [
+              {
+                "date": "2019-01-24T00:00:00Z",
+                "snippet": "W.T. Cosgrave was incarcerated in England and James O'Mara, as a Sinn Fein deputy did not attend for fear of arrest. Both men went on to play significant roles in the governance structures of the new Dáil in the following years.",
+                "title": "Kilkenny commemorates first Dáil - Kilkenny People",
+                "url": "https://www.kilkennypeople.ie/news/home/359797/kilkenny-commemorates-first-dail.html"
+              }
+            ],
+            "source_notes": {
+              "canadian-securities-commission": {
+                "aml_types": [
+                  "warning"
+                ],
+                "listing_started_utc": "2020-03-19T00:00:00Z",
+                "name": "Canadian Securities Administrators Disciplined List",
+                "url": "http://www.securities-administrators.ca/disciplinedpersons.aspx?id=74"
+              },
+              "canadian-security-administrators": {
+                "aml_types": [
+                  "warning"
+                ],
+                "listing_started_utc": "2020-10-09T00:00:00Z",
+                "name": "Canada CSA Disciplined Persons",
+                "url": "https://www.securities-administrators.ca/disciplinedpersons.aspx?id=74"
+              },
+              "complyadvantage-adverse-media": {
+                "aml_types": [
+                  "adverse-media",
+                  "adverse-media-general"
+                ],
+                "country_codes": [
+                  "IE"
+                ],
+                "name": "ComplyAdvantage Adverse Media"
+              }
+            },
+            "sources": [
+              "canadian-security-administrators",
+              "complyadvantage-adverse-media",
+              "canadian-securities-commission"
+            ],
+            "types": [
+              "warning",
+              "adverse-media",
+              "adverse-media-general"
+            ]
+          },
+          {
+            "name": "Michael Mario Dhuor",
+            "entity_type": "person",
+            "score": 21.294868,
+            "match_types": [
+              "name_fuzzy"
+            ],
+            "alternative_names": [
+              "Michael Mario Dhuor"
+            ],
+            "assets": [],
+            "associates": [],
+            "fields": {
+              "Country": [
+                {
+                  "value": "South Sudan",
+                  "source": "south-sudan-council-of-states",
+                  "tag": ""
+                }
+              ],
+              "Original Country Text": [
+                {
+                  "value": "South Sudan",
+                  "source": "south-sudan-council-of-states",
+                  "tag": ""
+                }
+              ],
+              "Countries": [
+                {
+                  "value": "South Sudan",
+                  "source": "",
+                  "tag": "country_names"
+                }
+              ],
+              "Active Start Date": [
+                {
+                  "value": "2011-08-01",
+                  "source": "south-sudan-council-of-states",
+                  "tag": "active_start_date"
+                }
+              ],
+              "Political Position": [
+                {
+                  "value": "Member of the National Council of States",
+                  "source": "south-sudan-council-of-states",
+                  "tag": "political_position"
+                }
+              ],
+              "Chamber": [
+                {
+                  "value": "National Council of States",
+                  "source": "south-sudan-council-of-states",
+                  "tag": ""
+                }
+              ],
+              "Locationurl": [
+                {
+                  "value": "https://oribadouglas.wordpress.com/tag/junubi/",
+                  "source": "south-sudan-council-of-states",
+                  "tag": ""
+                }
+              ]
+            },
+            "media": [],
+            "source_notes": {
+              "south-sudan-council-of-states": {
+                "aml_types": [
+                  "pep-class-1"
+                ],
+                "country_codes": [
+                  "SS"
+                ],
+                "name": "South Sudan Council of States",
+                "url": "https://oribadouglas.wordpress.com/tag/junubi/"
+              }
+            },
+            "sources": [
+              "south-sudan-council-of-states"
+            ],
+            "types": [
+              "pep-class-1",
+              "pep"
+            ]
+          },
+          {
+            "name": "Justin Mari Paul Michael Coningsby Culver",
+            "entity_type": "person",
+            "score": 21.273594,
+            "match_types": [
+              "name_fuzzy"
+            ],
+            "alternative_names": [
+              "Justin Mari Paul Michael Coningsby Culver"
+            ],
+            "assets": [],
+            "associates": [],
+            "fields": {
+              "Enforcement Agency": [
+                {
+                  "value": "United Kingdom Solicitors Discipline Tribunal",
+                  "source": "the-solicitors-discipline-tribunal",
+                  "tag": ""
+                }
+              ],
+              "Enforcement Type": [
+                {
+                  "value": "Strike Off",
+                  "source": "the-solicitors-discipline-tribunal",
+                  "tag": ""
+                }
+              ],
+              "offence": [
+                {
+                  "value": "Breaches, Delays, Failures, Others",
+                  "source": "the-solicitors-discipline-tribunal",
+                  "tag": ""
+                }
+              ],
+              "Related URL": [
+                {
+                  "value": "https://www.solicitorstribunal.org.uk/sites/default/files-sdt/9900-2008%20-%20Culver.pdf",
+                  "source": "the-solicitors-discipline-tribunal",
+                  "tag": "related_url"
+                }
+              ]
+            },
+            "media": [],
+            "source_notes": {
+              "the-solicitors-discipline-tribunal": {
+                "aml_types": [
+                  "fitness-probity"
+                ],
+                "listing_started_utc": "2019-10-30T00:00:00Z",
+                "name": "United Kingdom Solicitors Discipline Tribunal Persons",
+                "url": "https://www.solicitorstribunal.org.uk/judgment-search-results#judgment-list"
+              }
+            },
+            "sources": [
+              "the-solicitors-discipline-tribunal"
+            ],
+            "types": [
+              "fitness-probity"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "verification_result": {
+    "background_checks": 0
+  },
+  "info": {
+    "agent": {
+      "is_desktop": true,
+      "is_phone": false,
+      "useragent": "Unrecognized",
+      "device_name": "0",
+      "browser_name": "",
+      "platform_name": ""
+    },
+    "geolocation": {
+      "host": "194-114-148-67.datagroup.ua",
+      "ip": "195.114.148.67",
+      "rdns": "195.114.148.67",
+      "asn": "3326",
+      "isp": "Private Joint Stock Company Datagroup",
+      "country_name": "Ukraine",
+      "country_code": "UA",
+      "region_name": "Kyiv City",
+      "region_code": "30",
+      "city": "Kyiv",
+      "postal_code": "09410",
+      "continent_name": "Europe",
+      "continent_code": "EU",
+      "latitude": "50.367900848389",
+      "longitude": "30.653200149536",
+      "metro_code": "",
+      "timezone": "Europe/Kiev",
+      "ip_type": "ipv4",
+      "capital": "Kyiv",
+      "currency": "UAH"
+    }
+  },
+  "declined_reason": "AML screening failed",
+  "declined_codes": [
+    "SPDR34"
+  ],
+  "services_declined_codes": {
+    "background_checks": [
+      "SPDR34"
+    ]
+  }
+}

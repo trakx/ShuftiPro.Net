@@ -1,32 +1,22 @@
 ﻿using System;
-using System.IO;
 using System.Threading.Tasks;
 using FluentAssertions;
 using NUnit.Framework;
+using ShuftiPro.Contracts;
 using ShuftiPro.Enums;
-using ShuftiPro.Services;
-using ShuftiPro.Services.Document;
 
 namespace ShuftiPro.Tests
 {
-    public class ShuftiProDocumentServiceTests : ShuftiProServiceTestBase
+    public class ShuftiProDocumentServiceTests : ShuftiProTestBase
     {
-        private IShuftiProDocumentService documentService;
-
-        public override void Setup()
-        {
-            base.Setup();
-            this.documentService = new ShuftiProClient(Credentials).DocumentService;
-        }
-
         [Test]
         public async Task VerifyOnSite_ValidVerification_ReturnsFeedback()
         {
-            var verification = new ShuftiProOnSiteDocumentVerification
+            var verification = new ShuftiProVerification
             {
                 Reference = Guid.NewGuid().ToString("N"),
                 CallbackUrl = CallbackUrl,
-                Document = new ShuftiProOnSiteDocument
+                Document = new ShuftiProDocument
                 {
                     SupportedTypes = new[]
                     {
@@ -39,7 +29,7 @@ namespace ShuftiPro.Tests
                 }
             };
 
-            var feedback = await this.documentService.VerifyOnSiteAsync(verification);
+            var feedback = await this.ShuftiPro.VerifyAsync(verification);
             feedback.Should().NotBeNull();
             feedback.VerificationUrl.Should().NotBeEmpty();
             feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);
@@ -48,14 +38,11 @@ namespace ShuftiPro.Tests
         [Test]
         public async Task VerifyOffSite_ValidVerification_ReturnsFeedback()
         {
-            var image = await File.ReadAllBytesAsync("images/REAL_ID.png");
-            var base64Image = Convert.ToBase64String(image);
-
-            var verification = new ShuftiProOffSiteDocumentVerification
+            var verification = new ShuftiProVerification
             {
                 Reference = Guid.NewGuid().ToString("N"),
                 CallbackUrl = CallbackUrl,
-                Document = new ShuftiProOffSiteDocument
+                Document = new ShuftiProDocument
                 {
                     SupportedTypes = new[]
                     {
@@ -64,11 +51,11 @@ namespace ShuftiPro.Tests
                         ShuftiProDocumentType.DrivingLicense,
                         ShuftiProDocumentType.Passport
                     },
-                    Proof = $"data:image/png;base64,{base64Image}"
+                    Proof = await this.GetBase64Image(TestConstants.Images.RealId)
                 }
             };
 
-            var feedback = await this.documentService.VerifyOffSiteAsync(verification);
+            var feedback = await this.ShuftiPro.VerifyAsync(verification);
             feedback.Should().NotBeNull();
             feedback.Reference.Should().NotBeEmpty().And.BeEquivalentTo(verification.Reference);
             feedback.Data.Should().NotBeNull();

@@ -1,18 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
+using ShuftiPro.Contracts.Abstractions;
 using ShuftiPro.Converters;
 using ShuftiPro.Enums;
 
 namespace ShuftiPro.Contracts
 {
-    public class ShuftiProVerification
+    public class ShuftiProVerification : IShuftiProReference
     {
         /// <summary>
         /// Client side reference
         /// </summary>
         [Required]
         [StringLength(250, MinimumLength = 6)]
-        [JsonProperty("reference", Required = Required.Always)]
         public string Reference { get; set; }
 
         /// <summary>
@@ -148,5 +148,11 @@ namespace ShuftiPro.Contracts
         /// </summary>
         [JsonProperty("background_checks", NullValueHandling = NullValueHandling.Ignore)]
         public ShuftiProBackgroundCheck BackgroundCheck { get; set; }
+
+        /// <summary>
+        /// Field corresponds to Consent Check Verification service
+        /// </summary>
+        [JsonProperty("consent", NullValueHandling = NullValueHandling.Ignore)]
+        public ShuftiProConsent Consent { get; set; }
     }
 }
