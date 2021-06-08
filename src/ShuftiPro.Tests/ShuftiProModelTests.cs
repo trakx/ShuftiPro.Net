@@ -7,7 +7,6 @@ using ShuftiPro.Enums;
 
 namespace ShuftiPro.Tests
 {
-
     public class ShuftiProModelTests
     {
         [Test]
