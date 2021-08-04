@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 using ShuftiPro.Contracts.Abstractions;
+using ShuftiPro.Converters;
 using ShuftiPro.Enums;
 
 namespace ShuftiPro.Contracts
@@ -11,6 +13,7 @@ namespace ShuftiPro.Contracts
 
         public string AdditionalProof { get; set; }
 
+        [JsonConverter(typeof(ShuftiProEmptyNameToObjectConverter))]
         public ShuftiProName Name { get; set; }
 
         public ShuftiProGenderType? Gender { get; set; }

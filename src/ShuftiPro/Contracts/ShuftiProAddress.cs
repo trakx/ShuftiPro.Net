@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 using ShuftiPro.Contracts.Abstractions;
+using ShuftiPro.Converters;
 using ShuftiPro.Enums;
 
 namespace ShuftiPro.Contracts
@@ -10,6 +12,7 @@ namespace ShuftiPro.Contracts
         [Required]
         public ShuftiProAddressType[] SupportedTypes { get; set; }
 
+        [JsonConverter(typeof(ShuftiProEmptyNameToObjectConverter))]
         public ShuftiProName Name { get; set; }
 
         public string FullAddress { get; set; }

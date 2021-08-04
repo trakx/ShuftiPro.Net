@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json.Converters;
+﻿using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ShuftiPro.Converters
 {
@@ -7,6 +9,18 @@ namespace ShuftiPro.Converters
         public ShuftiProDateTimeConverter()
         {
             this.DateTimeFormat = "yyyy-MM-dd";
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            if (DateTime.MinValue.Equals(value))
+            {
+                writer.WriteValue(string.Empty);
+            }
+            else
+            {
+                base.WriteJson(writer, value, serializer);
+            }
         }
     }
 }
