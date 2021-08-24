@@ -4,6 +4,7 @@ namespace ShuftiPro.Contracts.Abstractions
 {
     interface IShuftiProNameBase
     {
+
         [JsonProperty("first_name", NullValueHandling = NullValueHandling.Ignore)]
         string FirstName { get; set; }
 
@@ -12,5 +13,9 @@ namespace ShuftiPro.Contracts.Abstractions
 
         [JsonProperty("last_name", NullValueHandling = NullValueHandling.Ignore)]
         string LastName { get; set; }
+
+        [JsonProperty("full_name", NullValueHandling = NullValueHandling.Ignore)]
+        string FullName { get; }
+
     }
 }
