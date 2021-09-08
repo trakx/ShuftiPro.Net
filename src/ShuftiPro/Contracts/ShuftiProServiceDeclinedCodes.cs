@@ -11,5 +11,7 @@ namespace ShuftiPro.Contracts
         public string[] Face { get; set; }
 
         public string[] Consent { get; set; }
+        
+        public string[] BackgroundChecks { get; set; }
     }
 }
