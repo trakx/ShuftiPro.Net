@@ -9,5 +9,11 @@ namespace ShuftiPro.Contracts
         public bool? AllowPhotocopy { get; set; }
 
         public bool? AllowLaminated { get; set; }
+
+        public bool? AllowScreenshot { get; set; }
+
+        public bool? AllowCropped { get; set; }
+
+        public bool? AllowScanned { get; set; }
     }
 }
