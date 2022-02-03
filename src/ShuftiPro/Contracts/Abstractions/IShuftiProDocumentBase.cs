@@ -15,6 +15,9 @@ namespace ShuftiPro.Contracts.Abstractions
         [JsonProperty("dob", NullValueHandling = NullValueHandling.Ignore)]
         DateTime? DayOfBirth { get; set; }
 
+        [JsonProperty("age", NullValueHandling = NullValueHandling.Ignore)]
+        int? Age { get; set; }
+
         [StringLength(100, MinimumLength = 2)]
         [JsonProperty("document_number", NullValueHandling = NullValueHandling.Ignore)]
         string DocumentNumber { get; set; }
