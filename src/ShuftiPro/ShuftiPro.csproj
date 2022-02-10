@@ -13,7 +13,7 @@
     <Copyright>Valentyn Stepanov</Copyright>
     <PackageId>ShuftiPro.Net</PackageId>
     <Product>ShuftiPro.Net</Product>
-    <PackageVersion>0.0.31</PackageVersion>
+    <PackageVersion>0.0.32</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
