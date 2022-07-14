@@ -73,7 +73,7 @@ namespace ShuftiPro.Enums
         [EnumMember(Value = "adverse-media-v2-terrorism")]
         AdverseMediaV2Terrorism,
 
-        [EnumMember(Value = "dverse-media-v2-cybercrime")]
+        [EnumMember(Value = "adverse-media-v2-cybercrime")]
         AdverseMediaV2Cybercrime,
 
         [EnumMember(Value = "adverse-media-v2-general-aml-cft")]
