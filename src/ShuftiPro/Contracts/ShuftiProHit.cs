@@ -8,7 +8,7 @@ namespace ShuftiPro.Contracts
     {
         public string Name { get; set; }
 
-        public ShuftiProHitEntityType EntityType { get; set; }
+        public string EntityType { get; set; }
 
         public float Score { get; set; }
 
