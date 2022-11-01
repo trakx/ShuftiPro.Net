@@ -12,5 +12,9 @@ namespace ShuftiPro.Contracts.Abstractions
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_online", NullValueHandling = NullValueHandling.Ignore)]
         bool? AllowOnline { get; set; }
+        
+        [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
+        [JsonProperty("check_duplicate_request", NullValueHandling = NullValueHandling.Ignore)]
+        bool? CheckDuplicateRequest { get; set; }
     }
 }
