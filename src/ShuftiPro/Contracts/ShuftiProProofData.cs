@@ -8,7 +8,7 @@ namespace ShuftiPro.Contracts
 
         public ShuftiProDocumentProof Document { get; set; }
 
-        public ShuftiProProof Address { get; set; }
+        public ShuftiProAddressProof Address { get; set; }
 
         public ShuftiProProof Consent { get; set; }
     }
