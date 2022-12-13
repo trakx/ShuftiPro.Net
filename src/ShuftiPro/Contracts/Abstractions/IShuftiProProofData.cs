@@ -11,7 +11,7 @@ namespace ShuftiPro.Contracts.Abstractions
         ShuftiProDocumentProof Document { get; set; }
 
         [JsonProperty("address")]
-        ShuftiProProof Address { get; set; }
+        ShuftiProAddressProof Address { get; set; }
 
         [JsonProperty("consent")]
         ShuftiProProof Consent { get; set; }

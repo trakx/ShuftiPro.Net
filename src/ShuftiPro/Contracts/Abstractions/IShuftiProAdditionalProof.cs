@@ -2,7 +2,7 @@
 
 namespace ShuftiPro.Contracts.Abstractions
 {
-    interface IShuftiProDocumentProof : IShuftiProProof
+    interface IShuftiProAdditionalProof
     {
         [JsonProperty("additional_proof", NullValueHandling = NullValueHandling.Ignore)]
         string AdditionalProof { get; set; }

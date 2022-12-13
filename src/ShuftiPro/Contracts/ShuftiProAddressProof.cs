@@ -2,7 +2,7 @@
 
 namespace ShuftiPro.Contracts
 {
-    public class ShuftiProDocumentProof : IShuftiProProof, IShuftiProAdditionalProof
+    public class ShuftiProAddressProof : IShuftiProProof, IShuftiProAdditionalProof
     {
         public string Proof { get; set; }
 

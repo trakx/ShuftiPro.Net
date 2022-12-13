@@ -3,7 +3,7 @@ using ShuftiPro.Converters;
 
 namespace ShuftiPro.Contracts.Abstractions
 {
-    interface IShuftiProDocument : IShuftiProDocumentProof, IShuftiProDocumentBase
+    interface IShuftiProDocument : IShuftiProProof, IShuftiProAdditionalProof, IShuftiProDocumentBase
     {
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         ShuftiProName Name { get; set; }
