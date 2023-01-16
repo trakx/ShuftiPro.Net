@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using ShuftiPro.Contracts;
@@ -42,35 +43,35 @@ namespace ShuftiPro
             this.clientCredentials = clientCredentials;
         }
 
-        public async Task<ShuftiProFeedback> VerifyAsync(ShuftiProVerification verification)
+        public Task<ShuftiProFeedback> VerifyAsync(ShuftiProVerification verification, CancellationToken cancellationToken = default)
         {
             this.EnsureRequestIsValid(verification);
 
-            return await this.MakeCall<ShuftiProFeedback>(HttpMethod.Post, null, verification, this.clientCredentials);
+            return this.MakeCall<ShuftiProFeedback>(HttpMethod.Post, null, verification, this.clientCredentials, cancellationToken);
         }
 
-        public async Task<ShuftiProFeedback> VerifyAsync(ShuftiProVerification verification, ShuftiProCredentials requestCredentials)
+        public async Task<ShuftiProFeedback> VerifyAsync(ShuftiProVerification verification, ShuftiProCredentials requestCredentials, CancellationToken cancellationToken = default)
         {
             this.EnsureRequestIsValid(verification);
 
-            return await this.MakeCall<ShuftiProFeedback>(HttpMethod.Post, null, verification, requestCredentials);
+            return await this.MakeCall<ShuftiProFeedback>(HttpMethod.Post, null, verification, requestCredentials, cancellationToken);
         }
 
-        public async Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference)
+        public async Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, CancellationToken cancellationToken = default)
         {
             this.EnsureRequestIsValid(reference);
 
-            return await this.MakeCall<ShuftiProStatus>(HttpMethod.Post, new Uri("/status", UriKind.Relative), reference, this.clientCredentials);
+            return await this.MakeCall<ShuftiProStatus>(HttpMethod.Post, new Uri("/status", UriKind.Relative), reference, this.clientCredentials, cancellationToken);
         }
 
-        public async Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials requestCredentials)
+        public async Task<ShuftiProStatus> GetStatusAsync(ShuftiProReference reference, ShuftiProCredentials requestCredentials, CancellationToken cancellationToken = default)
         {
             this.EnsureRequestIsValid(reference);
 
-            return await this.MakeCall<ShuftiProStatus>(HttpMethod.Post, new Uri("/status", UriKind.Relative), reference, requestCredentials);
+            return await this.MakeCall<ShuftiProStatus>(HttpMethod.Post, new Uri("/status", UriKind.Relative), reference, requestCredentials, cancellationToken);
         }
 
-        protected void EnsureRequestIsValid(object request)
+        private void EnsureRequestIsValid(object request)
         {
             var context = new ValidationContext(request);
             var results = new List<ValidationResult>();
@@ -93,20 +94,21 @@ namespace ShuftiPro
             this.EnsureCredentialsIsValid(credentials);
             var parameter = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{credentials.ClientId}:{credentials.SecretKey}"));
             var authorization = new AuthenticationHeaderValue(AuthenticationSchemes.Basic.ToString(), parameter);
+
             return authorization;
         }
 
-        protected async Task<TResponse> MakeCall<TResponse>(HttpMethod method, Uri requestUri, object content, ShuftiProCredentials credentials)
+        private async Task<TResponse> MakeCall<TResponse>(HttpMethod method, Uri requestUri, object content, ShuftiProCredentials credentials, CancellationToken cancellationToken = default)
         {
             var httpRequest = new HttpRequestMessage(method, requestUri);
             httpRequest.Headers.Authorization = this.GetAuthorizationHeader(credentials);
 
-            var requestContent = JsonConvert.SerializeObject(content);
-            httpRequest.Content = new StringContent(requestContent, Encoding.UTF8, "application/json");
-
             try
             {
-                var response = await httpClient.SendAsync(httpRequest);
+                var requestContent = JsonConvert.SerializeObject(content);
+                httpRequest.Content = new StringContent(requestContent, Encoding.UTF8, "application/json");;
+
+                var response = await httpClient.SendAsync(httpRequest, cancellationToken);
                 var responseContent = await response.Content.ReadAsStringAsync();
 
                 return JsonConvert.DeserializeObject<TResponse>(responseContent);

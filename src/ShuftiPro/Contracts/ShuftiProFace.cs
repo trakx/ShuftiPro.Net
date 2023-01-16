@@ -9,5 +9,7 @@ namespace ShuftiPro.Contracts
         public bool? AllowOffline { get; set; }
 
         public bool? AllowOnline { get; set; }
+        
+        public bool? CheckDuplicateRequest { get; set; }
     }
 }

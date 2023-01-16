@@ -10,7 +10,7 @@ namespace ShuftiPro.Contracts.Abstractions
         string Name { get; set; }
 
         [JsonProperty("entity_type")]
-        ShuftiProHitEntityType EntityType { get; set; }
+        string EntityType { get; set; }
 
         [JsonProperty("score")]
         float Score { get; set; }

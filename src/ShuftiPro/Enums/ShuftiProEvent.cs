@@ -36,5 +36,8 @@ namespace ShuftiPro.Enums
 
         [EnumMember(Value = "verification.status.changed")]
         VerificationStatusChanged,
+        
+        [EnumMember(Value = "review.pending")]
+        ReviewPending,
     }
 }

@@ -11,7 +11,6 @@ namespace ShuftiPro.Contracts.Abstractions
 
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_photocopy", NullValueHandling = NullValueHandling.Ignore)]
-
         bool? AllowPhotocopy { get; set; }
 
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
@@ -29,6 +28,5 @@ namespace ShuftiPro.Contracts.Abstractions
         [JsonConverter(typeof(ShuftiProBoolToIntConverter))]
         [JsonProperty("allow_scanned", NullValueHandling = NullValueHandling.Ignore)]
         bool? AllowScanned { get; set; }
-
     }
 }

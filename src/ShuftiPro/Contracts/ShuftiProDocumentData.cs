@@ -12,6 +12,8 @@ namespace ShuftiPro.Contracts
 
         public DateTime? DayOfBirth { get; set; }
 
+        public int? Age { get; set; }
+
         public string DocumentNumber { get; set; }
 
         public DateTime? IssueDate { get; set; }

@@ -38,6 +38,39 @@ namespace ShuftiPro.Enums
         Envelope,
 
         [EnumMember(Value = "cpr_smart_card_reader_copy")]
-        CprSmartCardReaderCopy
+        CprSmartCardReaderCopy,
+        
+        [EnumMember(Value = "property_tax")]
+        PropertyTax,
+                
+        [EnumMember(Value = "lease_agreement")]
+        LeaseAgreement,
+                
+        [EnumMember(Value = "insurance_card")]
+        InsuranceCard,
+                
+        [EnumMember(Value = "permanent_residence_permit")]
+        PermanentResidencePermit,
+                
+        [EnumMember(Value = "credit_card_statement")]
+        CreditCardStatement,
+                
+        [EnumMember(Value = "insurance_policy")]
+        InsurancePolicy,
+                
+        [EnumMember(Value = "e_commerce_receipt")]
+        ECommerceReceipt,
+                
+        [EnumMember(Value = "bank_letter_receipt")]
+        BankLetterReceipt,
+                
+        [EnumMember(Value = "birth_certificate")]
+        BirthCertificate,
+                
+        [EnumMember(Value = "salary_slip")]
+        SalarySlip,
+                
+        [EnumMember(Value = "any")]
+        Any,
     }
 }
